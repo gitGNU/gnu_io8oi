@@ -1,0 +1,37 @@
+# Copyright (c) 2011, MathHarbour.com, Henri Losoi
+# 
+# Permission to use, copy, modify, and/or distribute this software
+# for any purpose with or without fee is hereby granted, provided
+# that the above copyright notice and this permission notice appear
+# in all copies.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+# WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+# AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+# DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA
+# OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+# TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+# PERFORMANCE OF THIS SOFTWARE.
+# 
+
+Description
+io8oi's goal is a personalized, modular and user-controlled search.
+Future will investigate and researh ways to 
+
+Main areas of interest are:
+
+1. how to apply indifference curves to search results
+2. how to exploit indifference in results?
+3. how to break search into small parts that users are free to modify?
+4. main modes: path-depended-searching, state-depended-searching, --?
+5. leveraging analysis/mining techniques for the benefit of users?
+6. advanced UI modes such as vi-style combos, TAB and similar
+
+Dependencies
+- Python packages such as itertools, operator
+- R: itertools (GPL 2 [1])
+- Simile (BSD-style license[2])
+
+[1] http://cran.r-project.org/web/packages/itertools/index.html
+[2] http://simile.mit.edu/wiki/SIMILE:About

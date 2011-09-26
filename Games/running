@@ -1,0 +1,8 @@
+#
+# Description: 
+# A XYZ country starts a gradual banning of sites containing word cookie.
+# Banning means that they kill DNS servers and sometimes seize sites.
+# 
+# Set up a defence system with friendly DNS servers, springboard things --
+# nethack in opposite direction ;0
+#

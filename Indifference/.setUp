@@ -1,0 +1,22 @@
+source('effront.r')
+
+require('RUnit')
+require('effront')
+
+a <- c(1)
+checkEquals(c(1), a, "Great! It works!")
+
+
+checkTrue(1<2, "Works")
+
+test()
+
+#checkEquals(length(sdDummy), years, 'Right amount of SDs calcutaled.')
+
+
+#print("Return")
+#calculateReturns(files)
+#print("Risk")
+#calculateSds(passive)
+#createReturnStd(files)
+#timewiseStds(passive[2])
