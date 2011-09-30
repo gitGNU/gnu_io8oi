@@ -5,3 +5,11 @@
 5. enchance the search for power users: export/imports
 6. better UI
 7. play...
+
+
+Vizualization
+-------------
+1. good-looking hash-function for labeling with different graphs
+----> probably some ready code
+2. triangular plot with 3-choices, needs weights
+3. index valuations by day 
