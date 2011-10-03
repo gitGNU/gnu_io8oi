@@ -1,0 +1,98 @@
+<data>
+
+	<event
+		start="1883"
+ 		end="1946"
+		title = "John Keynes"
+		link="http://en.wikipedia.org/wiki/Keynes"
+		>
+		Macroeconomist, famous for working with business cycles, and a member of Bloomsbury Group.
+	</event>
+	<event
+		start="1895"
+ 		end="1988"
+		title = "David Dodd"
+		link="http://en.wikipedia.org/wiki/David_Dodd"
+		>
+		Financial analyst, a friend of Ben Graham.
+	</event>
+	<event
+		start="1894"
+ 		end="1976"
+		title = "Benjamin Graham"
+		link="http://en.wikipedia.org/wiki/Benjamin_Graham"
+		>
+		Father of value investor, began to quantify with things such as PE and PB.
+	</event>
+	<event
+		start="1907"
+ 		end="2004"
+		title = "Philip Fisher"
+		link="http://en.wikipedia.org/wiki/Philip_Arthur_Fisher"
+		>
+		Pioneer of growth investing. Famous for the book 'Common Stocks and Uncommon Profits' -book.
+	</event>
+	<event
+		start="1916"
+ 		title = "Walter J. Schloss"
+		link="http://en.wikipedia.org/wiki/Walter_J._Schloss"
+		>
+		Well-regarded value investor.
+	</event>
+	<event
+		start="1927"
+ 		title = "Harry Markowitz"
+		link="http://en.wikipedia.org/wiki/Harry_Markowitz"
+		>
+		Nobel Prize-winning economist, famous of the efficient frontier.
+	</event>
+	<event
+		start="1929"
+ 		title = "John Bogle"
+		link="http://en.wikipedia.org/wiki/John_Bogle"
+		>
+		The founder, retired CEO of The Vanguard, famous of the book 'Common Sense on Mutual Funds' -- pioneer of low-cost investing.
+	</event>
+	<event
+		start="1930"
+ 		title = "Warren Buffett"
+		link="http://fi.wikipedia.org/wiki/Warren_Buffett"
+		>
+		Legendary investor and particularly a businessman.
+	</event>
+	<event
+		start="1934"
+ 		title = "William Sharpe"
+		link="http://en.wikipedia.org/wiki/William_Forsyth_Sharpe"
+		>
+		Nobel Prize-winning economist.
+	</event>
+	<event
+		start="1939"
+ 		title = "Eugene Fama"
+		link="http://en.wikipedia.org/wiki/Eugene_Famafather of efficient market hypothesis"
+		>
+		Economist: famous of random walk and regarded as the father of efficient market hypothesis.
+	</event>
+	<event
+		start="1955"
+ 		title = "Bill Gates"
+		link="http://en.wikipedia.org/wiki/Bill_Gates"
+		>
+		Businessman and investor with some convergences with Warren Buffett.
+	</event>
+	<event
+		start="1974"
+ 		title = "The Vanguard"
+		link="http://en.wikipedia.org/wiki/John_C._Bogle"
+		>
+		John Bogle founds The Vanguard Group, specializing in low-cost indexed products.
+	</event>
+	<event
+		start="1998"
+ 		title = "Bogleheads.org"
+		link="http://www.bogleheads.org/wiki/Bogleheads"
+		>
+		Informal forum in Morningstar later transformed to Bogleheads.org, popular passive low-cost investing site.
+	</event>
+</data>

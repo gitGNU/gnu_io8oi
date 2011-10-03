@@ -1,0 +1,47 @@
+<data>
+
+	<event
+		start="1760"
+ 		title = "Stocks"
+		>
+		Lorillard Tobacco Company founded, it became the oldest tobacco company in the States.
+	</event>
+	<event
+		start="1879"
+ 		title = "Stocks"
+		>
+		Homestake Mining listed, it became the longest-listed stock in the history of the New York Stock Exchange.
+	</event>
+	<event
+		start="1970"
+ 		end="1979"
+		title = "Bogleheadian"
+		>
+		Frederick L. A. Grauer and Wells Fargo, Wells Fargo invented the first passive index investing strategy for major institutional investors under the leadership of Frederick L. A. Grauer. Later, it went on to help pioneer the exchange-traded fund business (through its iShares brand).
+	</event>
+	<event
+		start="1981"
+ 		title = "Bogleheadian"
+		>
+		Dimensional Fund Advisors founded by David Booth, assuming efficient markets.
+	</event>
+	<event
+		start="2002"
+ 		title = "Stocks"
+		>
+		Homestake Mining merged to Barrick Gold Corp.
+	</event>
+	<event
+		start="2008"
+ 		title = "Crash"
+		link="http://www.google.com/finance?q=GOOGLEINDEX_US:"
+		>
+		Invest search queries at the peak.
+	</event>
+	<event
+		start="2009"
+ 		title = "Buyout"
+		>
+		BlackRock buys Barclays (iShares brands, passive investnig etc), CVC Capital Partners tried to buy it first.
+	</event>
+</data>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs 
+  title="Math Harbour Bottom bar" 
+  author="MathHarbour.com"
+  />
+<Content type="html"><![CDATA[
+
+<style type="text/css">
+body 
+{ 
+ background: transparent; 
+ font-size:10px;
+ a:link {text-decoration:none;}
+ a:visited {text-decoration:none;}
+ a:hover {text-decoration:underline;}
+ a:active {text-decoration:underline;}
+}
+
+</style>
+
+<body>
+
+<div style="text-align:center">
+<a 
+href="http://art.mathharbour.com/" target="_top">Art</a>
+<a href="http://puzzle.mathharbour.com/" target="_top">Puzzles</a>
+<a href="http://security.mathharbour.com/" target="_top">Security</a>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+<a href="http://parrot.mathharbour.com/" target="_top">
+Junior Parrot</a>
+<a href="http://finance.mathharbour.com" target="_top">
+Finance</a>
+<a href="http://clifinance.mathharbour.com" target="_top">Cli</a>
+</div>
+<br>
+
+<div style="text-align:center">
+
+<a 
+href="http://www.mathharbour.com" target="_top">
+Math Harbour</a>
+<a href="http://past.mathharbour.com/" target="_top">
+Past</a>
+<a href="http://research.mathharbour.com/" target="_top">
+Research</a>
+
+</div>
+
+<br>
+<div style="text-align:center">
+
+<a href="http://www.mathharbour.com/search" target="_top">More.</a>
+
+</div>
+
+</body>
+
+
+]]></Content>
+</Module>
