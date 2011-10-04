@@ -27,6 +27,7 @@ Main areas of interest are:
 4. main modes: path-depended-searching, state-depended-searching, --?
 5. leveraging analysis/mining techniques for the benefit of users?
 6. advanced UI modes such as vi-style combos, TAB and similar
+7. Cubistic Vizualization
 
 Dependencies
 - Python packages such as itertools, operator
