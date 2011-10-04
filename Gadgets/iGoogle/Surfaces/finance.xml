@@ -172,19 +172,19 @@ Examples below.
 
 function _gel(id)
 {
-	return document.getElementById(id);
+  return document.getElementById(id);
 }
 
 function _toggle(el) 
 {
-	el = document.getElementById(el);
-	if (el !== null) {
-		if (el.style.display.length === 0 || el.style.display === "block") {
-			el.style.display = "none";
-		} else if (el.style.display === "none") {
-			el.style.display = "block";
-		}
-	}
+  el = document.getElementById(el);
+  if (el !== null) {
+    if (el.style.display.length === 0 || el.style.display === "block") {
+      el.style.display = "none";
+    } else if (el.style.display === "none") {
+      el.style.display = "block";
+    }
+  }
 }
 
 
@@ -285,8 +285,6 @@ document.write('<div align="center" style="vertical-align:middle"><img height="9
 define: 
 </textarea>
 
-
-
 <textarea rows=10 id="topics">ask
 cli
 dictionaries
@@ -296,6 +294,8 @@ math
 solder
 topics
 </textarea>
+
+
 
 
 <textarea rows=10 id="ask">android: 
@@ -393,6 +393,7 @@ hy:
 
 
 <textarea rows=10 id="dictionaries">de2eng: 
+de2de: 
 ee: 
 ee2eng: 
 eng2ee: 
@@ -517,29 +518,29 @@ document.write(message);
 <script>
   // takes a text field and an array of strings for autocompletion
   function autocomplete(input, data) 
-	{
+  {
 
     if (input.value.length == input.selectionStart && input.value.length == input.selectionEnd) 
-		{
+    {
       var candidates = []
-			
+      
       // filter data to find only strings that start with existing value
-			// then, check TAB-TAB: return next choice mod(len-1) if exact match
+      // then, check TAB-TAB: return next choice mod(len-1) if exact match
       for (var i=0; i < data.length; i++) 
-			{
+      {
         if (data[i].indexOf(input.value) == 0 && data[i].length > input.value.length)
-				{
+        {
           candidates.push(data[i])
-				} 
-				else if (data[i].indexOf(input.value) == 0)
-				{
-				  input.value = data[(i+1)%(data.length)];
-					return true;
-				}
+        } 
+        else if (data[i].indexOf(input.value) == 0)
+        {
+          input.value = data[(i+1)%(data.length)];
+          return true;
+        }
       }
       
       if (candidates.length > 0) 
-			{
+      {
         // some candidates for autocompletion are found
         if (candidates.length >= 1) input.value = candidates[0]
         else input.value = longestInCommon(candidates, input.value.length)
@@ -552,7 +553,7 @@ document.write(message);
   // finds the longest common substring in the given data set.
   // takes an array of strings and a starting index
   function longestInCommon(candidates, index) 
-	{
+  {
     var i, ch, memo
     do {
       memo = null
@@ -568,24 +569,24 @@ document.write(message);
   }
   
   function getData(id)
-	{
-		return document.getElementById(id).value.split("\n");
+  {
+    return document.getElementById(id).value.split("\n");
   }
   
   var input = document.getElementById('allQuery')
   
   // catch TAB keypresses in text input
   input.addEventListener('keydown', function(e) 
-	{
-		// data determined by the topic in the Select value
-		var data = getData(document.getElementById("searchTopic").value);
- 		var hidden = getData('hidden');
+  {
+    // data determined by the topic in the Select value
+    var data = getData(document.getElementById("searchTopic").value);
+    var hidden = getData('hidden');
 
-// Related to BROKEN until more hidden things
-// 		data = restrictArray(data, hidden);
-		//Dummy code
-		var rmMe=data.indexOf('fin');
-		if (rmMe!=-1) data.splice(rmMe,1);
+    //Related to BROKEN until more hidden things
+    //data = restrictArray(data, hidden);
+    //Dummy code
+    var rmMe=data.indexOf('fin');
+    if (rmMe!=-1) data.splice(rmMe,1);
 
     if (e.keyCode == 9 && autocomplete(this, data)) e.preventDefault()
   }, false)
@@ -593,33 +594,33 @@ document.write(message);
 
 // BROKEN 
 //
-// 	// Works like set restriction but for array
-// 	function restrictArray(data, restriction)
-// 	{
+//   // Works like set restriction but for array
+//   function restrictArray(data, restriction)
+//   {
 // 
-//  		for (var i=0; i < restriction.length; i++)
-//  		{
-//  			var rmMe = data.indexOf(restriction[i]);
-//  			if(rmMe!=-1) data.splice(rmMe, 1);
-//  		}
-// 		return data;
-// 	}
+//      for (var i=0; i < restriction.length; i++)
+//      {
+//        var rmMe = data.indexOf(restriction[i]);
+//        if(rmMe!=-1) data.splice(rmMe, 1);
+//      }
+//     return data;
+//   }
 
 
 
 
-	// Clear with ^C
-	var isCTRL = false;
-	document.onkeyup = function(e)
-	{
-		if (e.which == 17) isCTRL=false;
+  // Clear with ^C
+  var isCTRL = false;
+  document.onkeyup = function(e)
+  {
+    if (e.which == 17) isCTRL=false;
   }
 
-	document.onkeydown = function(e)
-	{
-		if (e.which == 17) isCTRL=true;
-		if (e.which == 67 && isCTRL) clear();
-	}
+  document.onkeydown = function(e)
+  {
+    if (e.which == 17) isCTRL=true;
+    if (e.which == 67 && isCTRL) clear();
+  }
 
 
 
@@ -631,55 +632,53 @@ document.write(message);
 function handleSubmit()
 {
 
-	var form = document.getElementById("moduleForm"),
-		pad = document.getElementById("allQuery"),
-	  query = _trim(pad.value.toLowerCase()),
-	  topic = document.getElementById("searchTopic"),
-		checkCommand = _trim(query).split(":")[0].toLowerCase(),
-		searchUrl = new Array(),
-		urls = new Array(),
-		commandExists = query.match(/^[^:]*:.*$/gi),
-		topics = document.getElementById("topics").value.split("\n");
+  var form = document.getElementById("moduleForm"),
+    pad = document.getElementById("allQuery"),
+    query = _trim(pad.value.toLowerCase()),
+    topic = document.getElementById("searchTopic"),
+    checkCommand = _trim(query).split(":")[0].toLowerCase(),
+    searchUrl = new Array(),
+    urls = new Array(),
+    commandExists = query.match(/^[^:]*:.*$/gi),
+    topics = document.getElementById("topics").value.split("\n");
 
-	// THIS MUST BE HERE
-	if (query == "") return false;
+  // THIS MUST BE HERE
+  if (query == "") return false;
 
-        // FIXING TO INVESTING, TODO: wrong?? bloat??
-        var searchUrl ="https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1459377513&q=";
+  // FIXING TO INVESTING, TODO: wrong?? bloat??
+  var searchUrl ="https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1459377513&q=";
 
-	for (var i =0; i <topics.length; i++)
-	{
-		// ALERT COLLISION POSSIBLE
-		if (query.toLowerCase() == topics[i].charAt(0) || query.toLowerCase() == topics[i])
-		{
-			topic.value = topics[i];
-			pad.value ="";
-			return false;
-		}
-	}
+  for (var i =0; i <topics.length; i++)
+  {
+    // ALERT COLLISION POSSIBLE
+    if (query.toLowerCase() == topics[i].charAt(0) || query.toLowerCase() == topics[i])
+    {
+      topic.value = topics[i];
+      pad.value ="";
+      return false;
+    }
+  }
 
-	if (topic.value == "topics") return false;
+  if (topic.value == "topics") return false;
 
-	//Landing search until better
-	searchUrl["ask"] = 'http://stackoverflow.com/search?q=';
-	searchUrl["cli"] =	'http://unix.stackexchange.com/search?q=';
-	searchUrl["dictionaries"] = 'http://writers.stackexchange.com?q=';
-	searchUrl["fin"] = 'https://noppa.tkk.fi/noppa/haku/';
-	searchUrl["invest"] =	'https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1459377513&q=';
-	searchUrl["math"] =	'http://math.stackexchange.com/search?q=';
-	searchUrl["solder"] = 'http://electronics.stackexchange.com/search?q=';
-	searchUrl["topics"] = '';
+  //Landing search until better
+  searchUrl["ask"] = 'http://stackoverflow.com/search?q=';
+  searchUrl["cli"] =  'http://unix.stackexchange.com/search?q=';
+  searchUrl["dictionaries"] = 'http://writers.stackexchange.com?q=';
+  searchUrl["fin"] = 'https://noppa.tkk.fi/noppa/haku/';
+  searchUrl["invest"] =  'https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1459377513&q=';
+  searchUrl["math"] =  'http://math.stackexchange.com/search?q=';
+  searchUrl["solder"] = 'http://electronics.stackexchange.com/search?q=';
+  searchUrl["topics"] = '';
 
     var props = ['quote|01xx0x00', 'help|01101000'];
 
-	if (!commandExists)
-	{	
-					searchUrl = searchUrl[topic.value] + encodeURIComponent(query);
-					window.open(searchUrl, form.target || "_top");
-					return false;
-	}
-
-
+  if (!commandExists)
+  {  
+          searchUrl = searchUrl[topic.value] + encodeURIComponent(query);
+          window.open(searchUrl, form.target || "_top");
+          return false;
+  }
 
         for (var i = 0; i < props.length; i++)
         {
@@ -691,6 +690,9 @@ function handleSubmit()
                 setTimeout(continueExecution(props[i].split("|")[0]), 3000);
             }
         }
+
+
+
 
 	// Modular Search
 
@@ -727,19 +729,20 @@ function handleSubmit()
 			'unix|http://unix.stackexchange.com/search?q=', 
 			'vim|http://vim.wikia.com/wiki/Special:Search?search='
 				];
-	urls["invest"] =
-			[
-			'boglehead|https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1459377513&q=',
-			'contrarian|https://sites.google.com/site/juniorparrot/system/app/pages/customSearch?scope=cse-goog_1108895127&q=',
-			'define|http://sites.google.com/site/investingharbour/system/app/pages/customSearch?scope=cse-goog_24153137&q=',
-			'edgar|http://www.sec.gov/cgi-bin/browse-edgar?company=&match=&filenum=&State=&Country=&SIC=&owner=exclude&Find=Find+Companies&action=getcompany&CIK=',
-			'growth|https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1012191880&q=',
-			'g|http://www.google.com/finance?q=',
-			'so|http://money.stackexchange.com/search?q=',
-			'stats|https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_77447182&q=',
-			'timeless|http://sites.google.com/site/investingharbour/system/app/pages/customSearch?scope=cse-goog_24153138&q=',
-			'value|https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1012191881&q='
-			];
+
+  urls["invest"] =
+      [
+      'boglehead|http://parrot.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1341241175&q=',
+      'contrarian|http://parrot.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1108895127&q=',
+      'define|http://sites.google.com/site/investingharbour/system/app/pages/customSearch?scope=cse-goog_24153137&q=',
+      'edgar|http://www.sec.gov/cgi-bin/browse-edgar?company=&match=&filenum=&State=&Country=&SIC=&owner=exclude&Find=Find+Companies&action=getcompany&CIK=',
+      'growth|http://finance.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1012191880&q=',
+      'g|http://www.google.com/finance?q=',
+      'so|http://money.stackexchange.com/search?q=',
+      'stats|http://finance.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_77447182&q=',
+      'timeless|http://sites.google.com/site/investingharbour/system/app/pages/customSearch?scope=cse-goog_24153138&q=',
+      'value|http://finance.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1012191881&q='
+      ];
 
 	urls["ask"] =
 			[
@@ -803,38 +806,38 @@ function handleSubmit()
 			];
 
 
-	urls["dictionaries"] =
-			[
-				'de2eng|http://dict.leo.org/ende?lp=ende&lang=de&search=',
-				'ee|http://www.eki.ee/dict/qs/index.cgi?Q=',
-				'ee2eng|http://dict.ibs.ee/translate.cgi?language=Estonian&word=',
-				'eng2ee|http://dict.ibs.ee/translate.cgi?language=English&word=',
-				'eng_adv_camb|http://dictionary.cambridge.org/dictionary/british/',
-				'esp2eng|http://www.dicts.info/2/english-esperanto.php?word='
-			];
+  urls["dictionaries"] =
+      [
+        'de2eng|http://dict.leo.org/ende?lp=ende&lang=de&search=',
+        'de2de|http://www.linguee.de/deutsch-englisch/search?source=auto&query=',
+        'ee|http://www.eki.ee/dict/qs/index.cgi?Q=',
+        'ee2eng|http://dict.ibs.ee/translate.cgi?language=Estonian&word=',
+        'eng2ee|http://dict.ibs.ee/translate.cgi?language=English&word=',
+        'eng_adv_camb|http://dictionary.cambridge.org/dictionary/british/',
+        'esp2eng|http://www.dicts.info/2/english-esperanto.php?word='
+      ];
 
+  urls = urls[topic.value];
 
-	urls = urls[topic.value];
+  if (commandExists)
+  {
 
-	if (commandExists)
-	{
+    for ( var i=0;i<urls.length; i++)
+    {
+      if (checkCommand == urls[i].split("|")[0])
+      {
+        var re = new RegExp("^"+urls[i].split("|")[0], "gi");
+        query = _trim(query.replace(re, "").split(":").join(""));
 
-		for ( var i=0;i<urls.length; i++)
-		{
-			if (checkCommand == urls[i].split("|")[0])
-			{
-				var re = new RegExp("^"+urls[i].split("|")[0], "gi");
-				query = _trim(query.replace(re, "").split(":").join(""));
+        searchUrl = urls[i].split("|")[1] + encodeURIComponent(query);
+        window.open(searchUrl, form.target || "_top");
 
-				searchUrl = urls[i].split("|")[1] + encodeURIComponent(query);
-				window.open(searchUrl, form.target || "_top");
+        return false;
+      }
+    }
+  }
 
-				return false;
-			}
-		}
-	}
-
-	return false;
+  return false;
 }
 
 

@@ -9,7 +9,8 @@ TAB is the key.
 Type T and then press ENTER to browse modes. 
 Welcome to the wonderland, modular search by Math Harbour, MathHarbour.com.
 "
-author ="MathHarbour.com"
+author ="MathHarbour.com
+"
 author_email ="mathharbour1@gmail.com"
 author_aboutme ="Harbour -project specializes in search."
 screenshot=""
@@ -21,6 +22,7 @@ scrolling="false">
 <Content type="html"> 
 <![CDATA[
 <html>
+
 
 <style type="text/css">
 body 
@@ -37,7 +39,16 @@ body
 
 
 
+
 <head>
+
+<script>
+// Track this gadget using Google Analytics.
+// Creates a tracking object and uses reportPageview method to call gadget view
+var ga = new _IG_GA("UA-10106633-5");
+ga.reportPageview('/view/allinoneGadget');
+</script>
+
 
 <style type="text/css">
 
@@ -62,14 +73,6 @@ color:#000000
 
 
 <body>
-
-
-<script>
-// Track this gadget using Google Analytics.
-// Creates a tracking object and uses reportPageview method to call gadget view
-var ga = new _IG_GA("UA-FILL-IT");
-ga.reportPageview('/view/allinoneGadget');
-</script>
 
 <script type="text/javascript">
 
@@ -188,9 +191,9 @@ contrarian:
 define: 
 edgar: 
 growth: 
-g:  
+g: 
 stats: 
-value:
+value: 
 </textarea>
 
 <textarea rows=10 id="math">ask: 
@@ -224,6 +227,7 @@ hy:
 
 
 <textarea rows=10 id="dictionaries">de2eng: 
+de2de: 
 ee: 
 ee2eng: 
 eng2ee: 
@@ -259,6 +263,7 @@ esp2eng:
 </select>
 
 </div>
+
 
 
 </div>
@@ -338,8 +343,8 @@ esp2eng:
     var data = getData(document.getElementById("searchTopic").value);
     var hidden = getData('hidden');
 
-// Related to BROKEN until more hidden things
-//     data = restrictArray(data, hidden);
+    //Related to BROKEN until more hidden things
+    //data = restrictArray(data, hidden);
     //Dummy code
     var rmMe=data.indexOf('fin');
     if (rmMe!=-1) data.splice(rmMe,1);
@@ -434,6 +439,10 @@ function handleSubmit()
   }
 
 
+
+
+
+
   // Modular Search
 
   urls["math"] =
@@ -469,6 +478,7 @@ function handleSubmit()
       'unix|http://unix.stackexchange.com/search?q=', 
       'vim|http://vim.wikia.com/wiki/Special:Search?search='
         ];
+
   urls["invest"] =
       [
       'boglehead|http://parrot.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1341241175&q=',
@@ -548,14 +558,13 @@ function handleSubmit()
   urls["dictionaries"] =
       [
         'de2eng|http://dict.leo.org/ende?lp=ende&lang=de&search=',
-        'deDe|http://www.linguee.de/deutsch-englisch/search?source=auto&query=',
+        'de2de|http://www.linguee.de/deutsch-englisch/search?source=auto&query=',
         'ee|http://www.eki.ee/dict/qs/index.cgi?Q=',
         'ee2eng|http://dict.ibs.ee/translate.cgi?language=Estonian&word=',
         'eng2ee|http://dict.ibs.ee/translate.cgi?language=English&word=',
         'eng_adv_camb|http://dictionary.cambridge.org/dictionary/british/',
         'esp2eng|http://www.dicts.info/2/english-esperanto.php?word='
       ];
-
 
   urls = urls[topic.value];
 
