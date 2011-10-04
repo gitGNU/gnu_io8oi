@@ -1,3 +1,0 @@
-1. check that each quote has comman at the end of line:  ,\@<!$
-2. check that each quote line starts with ' and ends with ',
-3. check that each line has 3 pcs of |:   \([^|]*|\)\{3}[^|]*
