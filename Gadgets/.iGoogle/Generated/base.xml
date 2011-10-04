@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="" 
+height="25" 
+description=
+"
+The search is small but powerful. 
+Easy to use in Gmail and phones. 
+Press TAB to see commands. 
+FILL THIS
+For the small, try 'Y (search)' -gadget.
+Provided by Math Harbour, MathHarbour.com.
+"
+author ="" 
+author_email =""
+author_aboutme =""
+screenshot=""
+title_url=""
+thumbnail=""
+category="" category2=""
+scrolling="false">
+</ModulePrefs>
+<Content type="html">
+<![CDATA[
+<html>
+<body>
+
+
+
+<script>
+// Track this gadget using Google Analytics.
+// Creates a tracking object and uses reportPageview method to call gadget view
+var ga = new _IG_GA("FILL_IT");  
+ga.reportPageview('/view/allinoneGadget');
+</script>
+
+
+
+
+<form onsubmit="return handleSubmit()" method="get" name="moduleForm" id="moduleForm">
+<div id="typingPad">
+<input type="text" name="allQuery" id="allQuery" size="15" />
+</div>
+<div id="help" style="display: none">
+<a target="_blank" href="http://mathharbour.com">MathHarbour</a>
+</div>
+
+<script type="text/javascript">
+
+
+function _toggle(el) 
+{
+	el = document.getElementById(el);
+	if (el !== null) {
+		if (el.style.display.length === 0 || el.style.display === "block") {
+			el.style.display = "none";
+		} else if (el.style.display === "none") {
+			el.style.display = "block";
+		}
+	}
+}
+
+
+
+function continueExecution()
+{
+	//finish doing things after the pause
+	_toggle('help');
+	_toggle('typingPad');
+	document.moduleForm.allQuery.value='';
+}
+
+</script>
+
+</form>
+
+
+
+
+<script type="text/javascript">
+
+
+function handleSubmit()
+{
+	var form = _gel("moduleForm"),
+	    elm = _gel("allQuery");
+	if (elm != "") 
+	{
+		var query = _trim(elm.value);
+		var searchUrl = "DEFINE IT";
+		var checkCommand = _trim(query).split(":")[0].toLowerCase();
+
+		var urls = ['SEARCH COMMAND|URL WITH SEARCH OR EQUIVALENT'];
+
+		for ( var i=0;i<urls.length; i++)
+		{
+			if (checkCommand == urls[i].split("|")[0])
+			{
+				searchUrl = urls[i].split("|")[1];
+				var re = new RegExp("^"+urls[i].split("|")[0], "gi");
+				query = _trim(query.replace(re, "").split(":").join(""));
+				i=10801;
+			}
+		}
+
+
+		if(checkCommand == "help") 
+		{
+			_toggle('typingPad');
+			_toggle('help');
+			query="";
+			setTimeout(continueExecution, 3000)
+		}
+
+		if (query != "" && searchUrl != "") 
+		{
+			searchUrl += escape(query);
+			window.open(searchUrl, form.target || "_blank");
+		}
+	}
+
+	return false;
+}
+
+
+// Tracks button click as an event
+ga.reportEvent("All-in-One Gadget", "Search", "Button", 0);
+
+</script>
+
+
+
+</html>
+</body>
+
+
+]]>
+</Content></Module>
