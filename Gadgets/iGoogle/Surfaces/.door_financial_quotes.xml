@@ -243,15 +243,22 @@ value:
 <input type="text" name="allQuery" id="allQuery" width="100%" />
 </div>
 
+
+
+</div>
+</form>
+
+
+
+
 <br>
 
 
 <p>
 <div id="igoogle">
 
-<a target="_top" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
 
-</div> </p>
+
 
 <div name="sites" style="text-align:right">
 
@@ -297,6 +304,8 @@ value:
 
 <a href="#" onmousedown="change_visibility('100000');">Back</a>
 </div>
+
+//TODO: here missing </div> colsing??
 
 
 <div id='quote' style='display: none; float: left;'>
