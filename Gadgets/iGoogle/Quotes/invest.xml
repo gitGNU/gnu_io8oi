@@ -28,7 +28,7 @@ scrolling="false">
 <Content type="html"> 
 <![CDATA[
 <html>
-<body>
+
 
 
 <script>
@@ -37,6 +37,23 @@ scrolling="false">
 var ga = new _IG_GA("UA-10106633-5");
 ga.reportPageview('/view/allinoneGadget');
 </script>
+
+
+<style type="text/css">
+body
+{
+ background: transparent;
+ font-size:10px;
+ a:link {text-decoration:none;}
+ a:visited {text-decoration:none;}
+ a:hover {text-decoration:underline;}
+ a:active {text-decoration:underline;}
+}
+
+</style>
+
+<body>
+
 
 <script type="text/javascript">
 
@@ -101,6 +118,9 @@ var default = '011000';
 change_visibility(default);
 
 </script>
+
+
+
 
 
 <div id='question_mark' style='float: left'>
