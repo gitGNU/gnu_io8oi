@@ -22,6 +22,7 @@ scrolling="false">
 <![CDATA[
 <html>
 
+
 <style type="text/css">
 body 
 { 
@@ -34,6 +35,7 @@ body
 }
 
 </style>
+
 
 
 
@@ -110,11 +112,15 @@ function clear()
 
 
 
+
+
 <p style="display:none">
 
 <textarea rows=10 id="general">ask: 
 define: 
 </textarea>
+
+
 
 <textarea rows=10 id="topics">ask
 cli
@@ -125,8 +131,6 @@ math
 solder
 topics
 </textarea>
-
-
 
 
 <textarea rows=10 id="ask">android: 
@@ -188,9 +192,9 @@ contrarian:
 define: 
 edgar: 
 growth: 
-g:  
+g: 
 stats: 
-value:
+value: 
 </textarea>
 
 <textarea rows=10 id="math">ask: 
@@ -259,6 +263,7 @@ esp2eng:
 </select>
 
 </div>
+
 
 
 </div>
