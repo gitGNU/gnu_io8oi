@@ -12,7 +12,7 @@ Welcome to the wonderland, modular search by Math Harbour, MathHarbour.com.
 author ="MathHarbour.com
 "
 author_email ="mathharbour1@gmail.com"
-author_aboutme ="Harbour -project specializes in search."
+author_aboutme ="MathHarbour.com specializes in search."
 screenshot=""
 title_url="http://mathharbour.com"
 thumbnail=""
@@ -118,6 +118,8 @@ function clear()
 <textarea rows=10 id="general">ask: 
 define: 
 </textarea>
+
+
 
 <textarea rows=10 id="topics">ask
 cli
@@ -493,6 +495,7 @@ function handleSubmit()
       'value|http://finance.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1012191881&q='
       ];
 
+
   urls["ask"] =
       [
         'android|http://android.stackexchange.com/search?q=',
@@ -565,6 +568,9 @@ function handleSubmit()
         'eng_adv_camb|http://dictionary.cambridge.org/dictionary/british/',
         'esp2eng|http://www.dicts.info/2/english-esperanto.php?word='
       ];
+
+
+
 
   urls = urls[topic.value];
 
