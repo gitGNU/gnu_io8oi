@@ -286,7 +286,7 @@ function handleSubmit()
         if (query != "" && searchUrl != "") 
         {
             searchUrl += escape(query);
-            window.open(searchUrl, form.target || "_top");
+            window.open(searchUrl, form.target || "_blank");
         }
     }
 

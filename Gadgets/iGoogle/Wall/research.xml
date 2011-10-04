@@ -114,6 +114,12 @@ Press TAB to see commands.
 
 <div style='float:left; margin-right: 2'>
 <input type="text" name="allQuery" id="allQuery" size="15" />
+<br>
+<a target="_blank" href="http://www.mathharbour.com/">
+<font color="">
+Math Harbour
+</font>
+</a>
 </div>
 
 <div style='float:left;'>
@@ -275,7 +281,7 @@ function handleSubmit()
         if (query != "" && searchUrl != "") 
         {
             searchUrl += escape(query);
-            window.open(searchUrl, form.target || "_top");
+            window.open(searchUrl, form.target || "_blank");
         }
     }
 

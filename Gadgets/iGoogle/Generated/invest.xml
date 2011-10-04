@@ -43,6 +43,10 @@ ga.reportPageview('/view/specific/investGadget');
 <input type="text" name="allQuery" id="allQuery" size="15" />
 </div>
 
+<div id="help" style="display: none">
+<a target="_blank" href="http://mathharbour.com/">Math Harbour</a>
+</div>
+
 <div id='quote' style="display: none;"><script>document.write(get_quote());</script></div>  
 
 
@@ -183,7 +187,7 @@ function handleSubmit()
 		if (query != "" && searchUrl != "") 
 		{
 			searchUrl += escape(query);
-			window.open(searchUrl, form.target || "_top");
+			window.open(searchUrl, form.target || "_blank");
 		}
 	}
 	return false;

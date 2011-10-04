@@ -22,7 +22,7 @@ scrolling="false">
 <Content type="html"> 
 <![CDATA[
 <html>
-
+<body>
 
 
 <script>
@@ -31,29 +31,6 @@ scrolling="false">
 var ga = new _IG_GA("UA-10106633-5");
 ga.reportPageview('/view/allinoneGadget');
 </script>
-
-
-
-<style type="text/css">
-body
-{
- background: transparent;
- font-size:10px;
- a:link {text-decoration:none;}
- a:visited {text-decoration:none;}
- a:hover {text-decoration:underline;}
- a:active {text-decoration:underline;}
-}
-
-</style>
-
-
-
-
-
-<body>
-
-
 
 <script type="text/javascript">
 
@@ -224,7 +201,7 @@ unsolved:
 
 <p><div id="igoogle" style="display: none">
 
-<a target="_top" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
+<a target="_blank" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
 
 </div> </p>
 
@@ -398,7 +375,7 @@ function handleSubmit()
         if (query != "" && searchUrl != "") 
         {
             searchUrl += escape(query);
-            window.open(searchUrl, form.target || "_top");
+            window.open(searchUrl, form.target || "_blank");
         }
     }
 
