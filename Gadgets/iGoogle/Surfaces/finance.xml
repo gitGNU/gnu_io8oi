@@ -6,7 +6,7 @@ width="270"
 description="Hide me anywhere you want. A huge amount of services under the artwork. Press TAB to see commands. Search provided by Math Harbour, Mathharbour.com. Basically same as 'Y (search)' -gadget but with extra navigation keys."
 author ="MathHarbour.com" 
 author_email ="mathharbour1@gmail.com"
-author_aboutme ="MathHarbour.com spelializes in search."
+author_aboutme ="MathHarbour.com specializes in search."
 screenshot="https://2781807968280804664-a-1802744773732722657-s-sites.googlegroups.com/site/freeffffblog/photos/small_jr.png" 
 title_url="http://freefinanceblog.com/" 
 thumbnail="http://4.bp.blogspot.com/_Qc1Z3hIcYO4/TNqtZb_GUzI/AAAAAAAABrg/lZ4BXEv66MI/s1600/junior_parrot_god_misery.png" 
@@ -99,7 +99,7 @@ function change_visibility(binX)
 </script>
 
 
-<div id='question_mark' style='display: none; float: left; background: transparent;'>
+<div id='question_mark' style='display: none; float: left'>
 
 <a href="#" onMouseDown="change_visibility('0t1ttt');">
 <font color="#000000">(?)</font></a>
@@ -107,7 +107,7 @@ function change_visibility(binX)
 
 
 
-<div id="help" style="display: none; float: left; background: transparent;">
+<div id="help" style="display: none; float: left;">
 <font color="#000000">
 Press TAB to see commands in the search -field. Examples below. 
 
@@ -122,7 +122,7 @@ Press TAB to see commands in the search -field. Examples below.
 </div>
 
 
-<div id="image" style="float: left; background: transparent;">
+<div id="image" style="float: left">
 
 <a href="#" onmousedown="change_visibility('001101');">
 
@@ -220,7 +220,7 @@ document.write('<div align="center" style="vertical-align:middle"><img height="9
 </div>
 
 
-<p style="display:none;  background: transparent;">
+<p style="display:none">
 <textarea rows=10 id="data">boglehead: 
 contrarian: 
 define: 
@@ -247,9 +247,11 @@ value:
 
 
 <p>
-<div id="igoogle" style="background: transparent;">
+<div id="igoogle">
 
+<a target="_top" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
 
+</div> </p>
 
 <div name="sites" style="text-align:right">
 
@@ -297,7 +299,7 @@ value:
 </div>
 
 
-<div id='quote' style='display: none; float: left; background: transparent;'>
+<div id='quote' style='display: none; float: left;'>
 
 
 <script>

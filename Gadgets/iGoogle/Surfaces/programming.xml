@@ -6,7 +6,7 @@ width="270"
 description="Hide me anywhere with massive power under the artwork. Big-O analysis, puzzles, programming, obfuscated artworks, challenges, unsolved problems and more comming. Search provided by Math Harbour, Mathharbour.com. For the small, try 'Y (search)' -gadget that covers Math, CLI and Investing."
 author ="MathHarbour.com"
 author_email ="mathharbour1@gmail.com"
-author_aboutme ="Harbour specializes in search."
+author_aboutme ="MathHarbour.com specializes in search."
 screenshot="http://3.bp.blogspot.com/_Qc1Z3hIcYO4/TA6s-xvBxoI/AAAAAAAABks/0RP4YmvVoxs/s1600/nailsMyHead.jpg"
 title_url="http://cliharbour.blogspot.com/" 
 thumbnail="http://3.bp.blogspot.com/_Qc1Z3hIcYO4/TA6s-xvBxoI/AAAAAAAABks/0RP4YmvVoxs/s1600/nailsMyHead.jpg"
@@ -16,7 +16,6 @@ scrolling="false">
 <Content type="html"> 
 <![CDATA[
 <html>
-<body>
 
 
 <style type="text/css">
@@ -33,12 +32,17 @@ body
 </style>
 
 
+<body>
+
+
 <script>
 // Track this gadget using Google Analytics.
 // Creates a tracking object and uses reportPageview method to call gadget view
 var ga = new _IG_GA("UA-10106633-5");
 ga.reportPageview('/view/allinoneGadget');
 </script>
+
+
 
 <script type="text/javascript">
 
@@ -197,11 +201,52 @@ vim:
 <br>
 
 
-<p><div id="igoogle">
+<p>
+<div id="igoogle">
 
-<a target="_blank" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
+<a target="_top" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
 
 </div> </p>
+
+<div name="sites" style="text-align:right">
+
+<div style="text-align:right" name="mix">
+@ 
+<a href="http://art.mathharbour.com/" target="_top">Art</a>
+<a href="http://puzzle.mathharbour.com/" target="_top">Puzzles</a>
+<a href="http://security.mathharbour.com/" target="_top">Security</a>
+</div>
+
+<div style="text-align:right" name="finance">
+(F)
+<a href="http://parrot.mathharbour.com/" target="_top">Junior Parrot</a>
+<a href="http://finance.mathharbour.com" target="_top">Finance</a> 
+<a href="http://clifinance.mathharbour.com" target="_top">Cli</a>
+</div>
+
+<div style="text-align:right" name="math">
+(M)
+<a href="http://www.mathharbour.com" target="_top">Math Harbour</a>
+<a href="http://past.mathharbour.com/" target="_top">Past</a>
+</div>
+
+<div style="text-align:right" name="research">
+(R) 
+<a href="http://research.mathharbour.com/" target="_top">Math</a>
+<a href="http://finance.research.mathharbour.com" target="_Top">Finance</a>
+<a href="http://cli.research.mathharbour.com" target="_Top">CLI</a>
+</div>
+
+<br>
+
+<div style="text-align:right">
+<a target="_top" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
+<a href="http://www.mathharbour.com/search" target="_top">More.</a>
+</div>
+
+
+</div>
+</p>
 
 
 
@@ -373,3 +418,4 @@ ga.reportEvent("All-in-One Gadget", "Search", "Button", 0);
 
 ]]>
 </Content></Module>
+
