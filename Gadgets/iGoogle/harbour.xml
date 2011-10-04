@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="TAB to Y-(search)" 
+<ModulePrefs title="Press TAB in Y-(search)" 
 height="25"
 description=
 "
@@ -21,6 +21,21 @@ scrolling="false">
 <Content type="html"> 
 <![CDATA[
 <html>
+
+<style type="text/css">
+body 
+{ 
+ background: transparent; 
+ font-size:10px;
+ a:link {text-decoration:none;}
+ a:visited {text-decoration:none;}
+ a:hover {text-decoration:underline;}
+ a:active {text-decoration:underline;}
+}
+
+</style>
+
+
 
 <head>
 
@@ -428,29 +443,29 @@ function handleSubmit()
 			'course|http://www.ocwconsortium.org/index.php?q=mathematics&option=com_coursefinder&uss=1&l=&s=&Itemid=166&b.x=35&b.y=9&b=search&q=',
 			'define|https://sites.google.com/site/mathharbourclassroom/system/app/pages/customSearch?scope=cse-goog_640195594&q=',
 			'eg|http://www.exampleproblems.com/wiki/index.php/Special:Search?search=',
-			'history|https://sites.google.com/site/mathharbourpast/system/app/pages/customSearch?scope=cse-goog_835377240&q=',
-			'latex|https://sites.google.com/site/mathharbourresearch/system/app/pages/customSearch?scope=cse-goog_696098646&q=',
+			'history|http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377240&q=',
+			'latex|http://research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_696098646&q=',
 			'prove|http://www.proofwiki.org/w/index.php?title=Special%3ASearch&go=Go&search=',
 			'puzzle|https://sites.google.com/site/mathharbourclassroom/system/app/pages/customSearch?scope=cse-goog_1087142469&q=',
 			'research|http://mathoverflow.net/search?q=',
 			'seq|http://oeis.org/search?q=',
 			'so|http://math.stackexchange.com/search?q=',
-			'timeline|https://sites.google.com/site/mathharbourpast/system/app/pages/customSearch?scope=cse-goog_835377241&q=',
-			'unsolved|https://sites.google.com/site/mathharbourresearch/system/app/pages/customSearch?scope=cse-goog_696098647&q='
+			'timeline|http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377241&q=',
+			'unsolved|http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377242&q='
 			];
 	urls["cli"] =
 			[
 			'ask|http://stackoverflow.com/search?q=',
 			'bsd|https://sites.google.com/site/cliharbour/system/app/pages/customSearch?scope=cse-goog_2024053178&q=',
-			'define|https://sites.google.com/site/cliharbourresearch/system/app/pages/customSearch?scope=cse-goog_1077465085&q=',
+			'define|http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1077465085&q=',
 			'gcode|http://www.google.com/codesearch?q=',
 			'github|http://github.com/search?q=',
-			'jobs|https://sites.google.com/site/cliharbourresearch/system/app/pages/customSearch?scope=cse-goog_1977362030&q=',
+			'jobs|http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1977362030&q=',
 			'obsd|https://sites.google.com/site/cliharbour/system/app/pages/customSearch?scope=cse-goog_1182548146&q=',
 			'ohloh|http://www.ohloh.net/p?query=',
 			'puzzle|https://sites.google.com/site/mathharbourclassroom/system/app/pages/customSearch?scope=cse-goog_1087142469&q=',
 			'refactor|http://www.google.com/search?q=site%3Ahttp%3A%2F%2Frefactormycode.com+',
-			'security|https://sites.google.com/site/cliharbourresearch/system/app/pages/customSearch?scope=cse-goog_2077800436&q=',
+			'security|http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_2077800436&q=',
 			'unix|http://unix.stackexchange.com/search?q=', 
 			'vim|http://vim.wikia.com/wiki/Special:Search?search='
 				];
