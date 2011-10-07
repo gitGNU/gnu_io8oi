@@ -26,9 +26,9 @@ print "Correlations are \n", correlMatrix
 
 #Plotting 
 data = (sds, res)
-labels = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+labels = []
 
-print "DATA is \n", data
+print "DATA(SDs, Returns) is \n", data
 
 titleTime = "Test Time"
 plt = hx.attachTitles(data, titleTime)

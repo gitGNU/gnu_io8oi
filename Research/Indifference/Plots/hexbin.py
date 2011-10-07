@@ -32,8 +32,7 @@ going them through. Only looking at some samples or general view.
 import numpy as np
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
-import random
-import math
+import random, math, sys
 
 
 
@@ -43,37 +42,42 @@ def attachTitles(data, titleTime):
 	Data means (SD, RETURN).
 	"""
 
-	x=np.array([float(t[1]) for t in data])
+	x=np.array([float(t) for t in data[1]])
 
-	#TODO: getting here negative numbes!??!
-	y=np.array([float(t[0]) for t in data]) #[math.log(float(t[0])) for t in data])
+	try:
+		y=np.array([math.log(float(t)) for t in data[0]])
+	except ValueError:
+		sys.exit("SDs must be positive, wrong data: \n%s" %(str(data)))
 
 	xmin = x.min()
 	xmax = x.max()
 	ymin = y.min()
-	ymax = y.max()+0.1
+	ymax = y.max()
 
 	#plt.subplot(122)
 	plt.hexbin(x,y,bins='log', cmap=cm.jet)
 	plt.axis([xmin, xmax, ymin, ymax])
-	plt.title("Crash Efficient Frontier")#, %s\n " 
-	#	"hot colour for randomly-allocated portfolios."%(str(titleTime)))
-	plt.xlabel("Portfolio return")
-	plt.ylabel("Portfolio risk [ln(SD)]")
+	#plt.title(u'Crash Efficient Frontier, %s\n'
+	#	 'hot colour for randomly-allocated portfolios.'%(str(titleTime)))
+	#plt.xlabel("Portfolio return")
+	#plt.ylabel("Portfolio risk [ln(SD)]")
 	cb = plt.colorbar()
-	cb.set_label('log10(N) where N is occurencys')
+	#cb.set_label('log10(N) where N is occurencys')
 
 	return plt
 
 
-def attachLabels(labels, plt, data):
+def attachLabels(data, labels, plt):
 	"""
 	Attach labels to the hexbin plot,
 	data must have the form (SD, Return).
 	"""
 
-	#TODO: getting here negative numbes!??!
-	y=np.array([float(t[0]) for t in data]) #[math.log(float(t[0])) for t in data])
+	try:
+		y=np.array([math.log(float(t)) for t in data[0]])
+	except ValueError:
+		sys.exit("SDs must be positive, wrong data: \n%s" %(str(data)))
+
 	ymax = y.max()+0.1
 
 
@@ -87,34 +91,25 @@ def attachLabels(labels, plt, data):
 			lll,
 			xy=(rrr,sss),
 
+			#TODO: create some nice hashing function for labeling
 			# Hashing function to get the dots to the middle
-			xytext=(rrr-0.03, (ymax-sss)/3+i/10),
-			arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0')
+			xytext=(rrr-0.03, (ymax-sss)/3+i/10)#,
+			#arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0')
 		)
 
 	return plt
 
 
-# TODO: replace the data retrieval with readVals -function
+#EXAMPLE 1: random data
 #
-# EXAMPLE
+#density =int(1e2)
 #
-# Individual fund data 
-#labels= [ 1, 2 , 3 , 4, ..., 999]
+#rets = [random.uniform(0.07,1)+0.01 for x in range(density)]
+#sds = [random.uniform(1,4) for x in range(density)]
+#random.shuffle(rets)
+#random.shuffle(sds)
+#data = (sds, rets)
+#plt = attachTitles(data, "Test Title")
+#plt = attachLabels(data, [x for x in range(100000)], plt)
+#plt.show() 
 #
-#
-# READING PORTFOLIO COMBINATION points
-# READ tuple(SD, return) FROM FILES SDs and RETURNS
-#f = file(".data", "r").readlines()
-#combs = [x.rstrip().split("\t") for x in f]
-#rets = [float(r) for r in file("RETURNS", "r").readlines()]
-#sds = [float(s) for s in file("SDs", "r").readlines()]
-#dataas=np.array([[float(x),float(y)] for (x,y) in zip(rets,sds)])
-#
-#
-#
-#data = # (SD, Return)
-#plt = attachTitles(data, titleTime):
-#plt = attachLabels(labels, plt, data)
-#
-#plt.show()
