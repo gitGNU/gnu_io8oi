@@ -179,6 +179,7 @@ def returns(dataMatrix, period):
 
 		returns = [numpy.average(rets) for rets in dailyReturns]
 	except ValueError:
+		print "ReadDateVals ERR with Returns -function\n"
 		print "Either you have negative valuations or"
 		sys.exit("CSV -files are not of the same lenght.")
 

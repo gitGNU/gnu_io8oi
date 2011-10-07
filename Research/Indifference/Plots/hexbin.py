@@ -42,6 +42,8 @@ def attachTitles(data, titleTime):
 	Data means (SD, RETURN).
 	"""
 
+	#print "TITLES: Data's lenght is %d, and it is %s."%(len(data), str(data))
+
 	x=np.array([float(t) for t in data[1]])
 
 	try:
@@ -57,10 +59,10 @@ def attachTitles(data, titleTime):
 	#plt.subplot(122)
 	plt.hexbin(x,y,bins='log', cmap=cm.jet)
 	plt.axis([xmin, xmax, ymin, ymax])
-	#plt.title(u'Crash Efficient Frontier, %s\n'
-	#	 'hot colour for randomly-allocated portfolios.'%(str(titleTime)))
-	#plt.xlabel("Portfolio return")
-	#plt.ylabel("Portfolio risk [ln(SD)]")
+	plt.title(u'Crash Efficient Frontier, %s\n'
+		 'hot colour for randomly-allocated portfolios.'%(str(titleTime)))
+	plt.xlabel("Portfolio return")
+	plt.ylabel("Portfolio risk [ln(SD)]")
 	cb = plt.colorbar()
 	#cb.set_label('log10(N) where N is occurencys')
 
@@ -72,6 +74,11 @@ def attachLabels(data, labels, plt):
 	Attach labels to the hexbin plot,
 	data must have the form (SD, Return).
 	"""
+
+	#print "LABELS: Data's lenght is %d, and it is %s."%(len(data), str(data))
+
+	if len(data) != 2:
+		sys.exit("attachLabels must have data -len 2 for SDs and returns")
 
 	try:
 		y=np.array([math.log(float(t)) for t in data[0]])

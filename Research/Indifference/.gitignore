@@ -3,3 +3,4 @@ TestDATA
 *.pyc
 ./lib/*.pyc
 *.pyc
+./Plots/*.pyc
