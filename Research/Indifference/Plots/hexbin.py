@@ -44,7 +44,9 @@ def attachTitles(data, titleTime):
 	"""
 
 	x=np.array([float(t[1]) for t in data])
-	y=np.array([math.log(float(t[0])) for t in data])
+
+	#TODO: getting here negative numbes!??!
+	y=np.array([float(t[0]) for t in data]) #[math.log(float(t[0])) for t in data])
 
 	xmin = x.min()
 	xmax = x.max()
@@ -54,8 +56,8 @@ def attachTitles(data, titleTime):
 	#plt.subplot(122)
 	plt.hexbin(x,y,bins='log', cmap=cm.jet)
 	plt.axis([xmin, xmax, ymin, ymax])
-	plt.title("Crash Efficient Frontier, %s\n
-		hot colour for randomly-allocated portfolios."%str(titleTime))
+	plt.title("Crash Efficient Frontier")#, %s\n " 
+	#	"hot colour for randomly-allocated portfolios."%(str(titleTime)))
 	plt.xlabel("Portfolio return")
 	plt.ylabel("Portfolio risk [ln(SD)]")
 	cb = plt.colorbar()
@@ -69,6 +71,11 @@ def attachLabels(labels, plt, data):
 	Attach labels to the hexbin plot,
 	data must have the form (SD, Return).
 	"""
+
+	#TODO: getting here negative numbes!??!
+	y=np.array([float(t[0]) for t in data]) #[math.log(float(t[0])) for t in data])
+	ymax = y.max()+0.1
+
 
 	rets = data[1]
 	sds = data[0]
