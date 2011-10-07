@@ -37,53 +37,77 @@ import math
 
 
 
-# Individual fund data 
-labels= [ 1, 2 , 3 , 4, ..., 999]
+def attachTitles(data, titleTime):
+	"""
+	Attach titles to the hexbin -plot.
+	Data means (SD, RETURN).
+	"""
+
+	x=np.array([float(t[1]) for t in data])
+	y=np.array([math.log(float(t[0])) for t in data])
+
+	xmin = x.min()
+	xmax = x.max()
+	ymin = y.min()
+	ymax = y.max()+0.1
+
+	#plt.subplot(122)
+	plt.hexbin(x,y,bins='log', cmap=cm.jet)
+	plt.axis([xmin, xmax, ymin, ymax])
+	plt.title("Crash Efficient Frontier, %s\n
+		hot colour for randomly-allocated portfolios."%str(titleTime))
+	plt.xlabel("Portfolio return")
+	plt.ylabel("Portfolio risk [ln(SD)]")
+	cb = plt.colorbar()
+	cb.set_label('log10(N) where N is occurencys')
+
+	return plt
 
 
-# READING PORTFOLIO COMBINATION points
-f = file(".data", "r").readlines()
-combs = [x.rstrip().split("\t") for x in f]
+def attachLabels(labels, plt, data):
+	"""
+	Attach labels to the hexbin plot,
+	data must have the form (SD, Return).
+	"""
 
-# READ tuple(SD, return) FROM FILES SDs and RETURNS
-rets = [float(r) for r in file("RETURNS", "r").readlines()]
-sds = [float(s) for s in file("SDs", "r").readlines()]
-dataas=np.array([[float(x),float(y)] for (x,y) in zip(rets,sds)])
+	rets = data[1]
+	sds = data[0]
 
-x=np.array([float(t[1]) for t in combs])
-#y=np.array([float(t[0]) for t in combs])
+	## ATTACH THE LABELS TO THE HEXPLOT
+	#
+	for (i,rrr,sss,lll) in zip(range(len(rets)), rets, sds, labels):
+		plt.annotate(
+			lll,
+			xy=(rrr,sss),
 
-y=np.array([math.log(float(t[0])) for t in combs])
+			# Hashing function to get the dots to the middle
+			xytext=(rrr-0.03, (ymax-sss)/3+i/10),
+			arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0')
+		)
 
-
-
-xmin = x.min()
-xmax = x.max()
-ymin = y.min()
-ymax = y.max()+0.1
-
-
-#plt.subplot(122)
-plt.hexbin(x,y,bins='log', cmap=cm.jet)
-plt.axis([xmin, xmax, ymin, ymax])
-plt.title("Crash Efficient Frontier, until XYZ days\nHot colour for pareto-efficient portfolios with ZYX funds")
-plt.xlabel("Portfolio return")
-plt.ylabel("Portfolio risk [ln(SD)]")
-cb = plt.colorbar()
-cb.set_label('log10(N) where N is occurencys')
+	return plt
 
 
-## ATTACH THE LABELS TO THE HEXPLOT
+# TODO: replace the data retrieval with readVals -function
 #
-for (i,rrr,sss,lll) in zip(range(len(rets)), rets, sds, labels):
-	plt.annotate(
-		lll,
-		xy=(rrr,sss),
-
-		# Hashing function to get the dots to the middle
-		xytext=(rrr-0.03, (ymax-sss)/3+i/10),
-		arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0')
-	)
-
-plt.show()
-
+# EXAMPLE
+#
+# Individual fund data 
+#labels= [ 1, 2 , 3 , 4, ..., 999]
+#
+#
+# READING PORTFOLIO COMBINATION points
+# READ tuple(SD, return) FROM FILES SDs and RETURNS
+#f = file(".data", "r").readlines()
+#combs = [x.rstrip().split("\t") for x in f]
+#rets = [float(r) for r in file("RETURNS", "r").readlines()]
+#sds = [float(s) for s in file("SDs", "r").readlines()]
+#dataas=np.array([[float(x),float(y)] for (x,y) in zip(rets,sds)])
+#
+#
+#
+#data = # (SD, Return)
+#plt = attachTitles(data, titleTime):
+#plt = attachLabels(labels, plt, data)
+#
+#plt.show()
