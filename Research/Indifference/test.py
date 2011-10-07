@@ -8,7 +8,12 @@ import numpy
 #print rv.aves([1,2,8,1,4])
 
 # Data
-files = sorted(glob.glob("./TestDATA/.*.csv"))
+
+#TODO: does not work with 1k files but works with 10 files???
+#files = sorted(glob.glob("./TestDATA/1000/.*.csv"))
+
+files = sorted(glob.glob("./TestDATA/10/.*.csv"))
+
 datas = rv.readDatas(files)
 arr = rv.dateWiseValsList(datas)
 arr = rv.rmPlaceholders(arr, 0)
