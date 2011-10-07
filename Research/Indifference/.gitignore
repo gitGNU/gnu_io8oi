@@ -1,1 +1,5 @@
 Data
+TestDATA
+*.pyc
+./lib/*.pyc
+*.pyc
