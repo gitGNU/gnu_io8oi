@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Harbour Search" 
+height="70"
+description=
+"
+Close your eyes and command!
+de2eng -command with 'dictionaries', pause and 'deutsch to english'.
+Support for iPhone.
+Advanced modularization for topics such as mathematics, dictionaries, calculators, logic vizualizers and for much more!
+Adventure.
+Welcome to the wonderland by Math Harbour, MathHarbour.com.
+"
+author ="MathHarbour.com" author_email = "mathharbour1@gmail.com" author_aboutme = "Math Harbour specializes in search." title_url="http://mathharbour.com" category="tools" category2="technology" scrolling="false"
+thumbnail= "http://4.bp.blogspot.com/-2WL9JtKMyhc/TphcwBQHCZI/AAAAAAAACGA/F3O8HV7VILo/s1600/wheel.png"
+screenshot= "http://4.bp.blogspot.com/-2WL9JtKMyhc/TphcwBQHCZI/AAAAAAAACGA/F3O8HV7VILo/s1600/wheel.png">
+<Require feature="dynamic-height"/>
+</ModulePrefs>
+<Content type="html">
+<![CDATA[
+<html>
+
+
+
+<style type="text/css">
+body
+{
+ background: transparent;
+ font-size:10px;
+ a:link {text-decoration:none;}
+ a:visited {text-decoration:none;}
+ a:hover {text-decoration:underline;}
+ a:active {text-decoration:underline;}
+}
+
+img
+{
+ float: left;
+ width: 25px;
+ height: 25px;
+}
+
+input
+{
+ float: left;
+ width: 70%;
+}
+
+#allQuery{
+background-image:url('http://1.bp.blogspot.com/-7aEFFShhdPs/TpjXjqNH9hI/AAAAAAAACGg/SRFvVKqwjJU/s1600/timeGlass15.png');
+background-repeat:no-repeat;
+padding-left:17px;
+max-width:400px;
+}
+
+#phoneButton {
+cursor: pointer;
+height: 25px;
+width: 25px;
+}
+
+#data{ display:none }
+
+#search {
+float:left;
+height:98%;
+width:98%;
+}
+
+#searchTopic{
+border:none;
+background:transparent;
+font-size:8px;
+display:none;
+clear:both;
+vertical-align:sup;
+}
+
+#searchFirstline {
+display:block;
+}
+#topic_box {
+display:block;
+clear:both;
+}
+
+
+#topicStatus{
+background:transparent;
+border:none;
+font-size:8px;
+position:absolute;
+top:30px;
+left:53px;
+}
+
+#back{
+cursor: pointer;
+top:30px;
+left:0px;
+font-size:8px;
+position:absolute;
+font-colour: brown;
+background:transparent;
+}
+
+#harbour{
+cursor: pointer;
+top:30px;
+left:21px;
+font-size:8px;
+position:absolute;
+font-colour: brown;
+background:transparent;
+}
+
+
+#sites{
+ display:none;
+ float: left;
+ position: absolute;
+ top: 50px;
+ left: 1px;
+}
+
+
+</style>
+
+
+
+
+<head>
+
+<script>
+// Track this gadget using Google Analytics.
+// Creates a tracking object and uses reportPageview method to call gadget view
+var ga = new _IG_GA("UA-10106633-5");
+ga.reportPageview('/view/allinoneGadget');
+</script>
+
+</head>
+
+
+
+<body>
+
+<script type="text/javascript">
+
+// Switching from old API to new
+// http://code.google.com/apis/gadgets/docs/migration.html#analytics
+
+function _gel(id)
+{
+  return document.getElementById(id);
+}
+
+function _toggle(el)
+{
+  el = document.getElementById(el);
+  if (el !== null) {
+    if (el.style.display.length === 0 || el.style.display === "block") {
+      el.style.display = "none";
+    } else if (el.style.display === "none") {
+      el.style.display = "block";
+    }
+  }
+}
+
+function _IG_GetImage(url)
+{
+  var img = document.createElement("img");
+  img.src = gadgets.io.getProxyUrl(url);
+  return img;
+}
+
+function clear()
+{
+  document.getElementById('allQuery').value='';
+  document.getElementById('allQuery').focus();
+}
+
+</script>
+
+
+
+<p id="data">
+
+<textarea rows=10 id="general">ask: 
+define: 
+</textarea>
+
+<textarea rows=10 id="topics">ask
+cli
+dictionaries
+fin
+invest
+math
+solder
+topics
+</textarea>
+
+
+
+
+<textarea rows=10 id="ask">android: 
+area51: 
+atheism: 
+audio: 
+bicycles: 
+boardgames: 
+codegolf: 
+codereview: 
+cooking: 
+cstheory: 
+dba: 
+diy: 
+electronics: 
+gamedev: 
+gaming: 
+gis: 
+graphicdesign: 
+guitars: 
+homebrew: 
+math: 
+money: 
+physics: 
+programmers: 
+quant: 
+rpg: 
+scifi: 
+security: 
+server: 
+so: 
+startup: 
+stats: 
+tex: 
+ui: 
+unix: 
+webapps: 
+webmasters: 
+wordpress: 
+writers: 
+</textarea> 
+
+<textarea rows=10 id="cli">ask: 
+bsd: 
+define: 
+gcode: 
+github: 
+jobs: 
+obsd: 
+ohloh: 
+puzzle: 
+refactor: 
+security: 
+vim: 
+</textarea>
+
+<textarea rows=10 id="invest">boglehead: 
+contrarian: 
+define: 
+edgar: 
+growth: 
+g: 
+stats: 
+value: 
+</textarea>
+
+<textarea rows=10 id="math">ask: 
+alpha: 
+course: 
+define: 
+eg: 
+history: 
+latex: 
+prove: 
+puzzle: 
+research: 
+seq: 
+timeline: 
+unsolved: 
+</textarea>
+
+<textarea rows=10 id="solder">ask: 
+define: 
+fpga: 
+openhw: 
+</textarea>
+
+<textarea rows=10 id="fin">aty_kirjasto: 
+aty_noppa: 
+aty_tentit: 
+hy_kirjasto: 
+hy_tentit: 
+hy: 
+</textarea>
+
+
+<textarea rows=10 id="dictionaries">de2eng: 
+de2de: 
+ee: 
+ee2eng: 
+eng2ee: 
+eng_adv_camb: 
+esp2eng: 
+</textarea>
+
+
+<textarea rows=10 id="hidden">fin
+</textarea>
+
+</p>
+
+
+<div id="search">
+
+
+<div id="searchFirstline">
+<form onsubmit="return handleSubmit();" method="get" name="moduleForm" id="moduleForm">
+<div id="typingPad">
+<input title="Click or TAB to Auto-complete, Enter to finish." type="text" name="allQuery" id="allQuery" width="100%" size="15"/>
+
+<img title="Click or TAB to Auto-complete, Enter to finish." src="http://4.bp.blogspot.com/-2WL9JtKMyhc/TphcwBQHCZI/AAAAAAAACGA/F3O8HV7VILo/s1600/wheel.png" id="phoneButton">
+</div>
+
+
+<div id="topic_box">
+
+<select name="searchTopic" id="searchTopic" size=1 onChange="clear()" disabled="disabled">
+<option value="ask">Ask</option>
+<option value="cli">CLI</option>  
+<option value="dictionaries">dictionaries</option>  
+<option value="invest">Invest</option>
+<option value="math">Math</option>  
+<option value="solder">Solder</option>  
+<option value="fin">Suomi</option>
+<option value="topics" selected="selected">Topics</option>
+</select>
+
+</div>
+
+
+
+
+
+</div>
+</form>
+
+<a id="back" onmousedown="updateStatus('topics')">back</a>
+<input id="topicStatus" readonly="readonly" disabled="disabled"></input>
+
+</div>
+
+
+
+<div id="sites" name="style must be here for toggling, 1st init" style="display: none;">
+
+<div id="mix">
+
+<a href="http://www.mathharbour.com" target="_top">Math Harbour</a>
+<a href="http://parrot.mathharbour.com/" target="_top">Jr. Parrot</a>
+<a href="http://art.mathharbour.com/" target="_top">Art</a>
+</div>
+
+<br>
+<div id="finance">
+
+<a href="http://finance.research.mathharbour.com" target="_Top">Finance</a>
+<a href="http://finance.mathharbour.com" target="_top">Parrot on Finance</a> 
+<a href="http://clifinance.mathharbour.com" target="_top">Cli Finance</a>
+</div>
+
+<div id="research">
+<a href="http://cli.research.mathharbour.com" target="_Top">Cli</a>
+<a href="http://security.mathharbour.com/" target="_top">Otto on Security</a>
+<a href="http://puzzle.mathharbour.com/" target="_top">Puzzles</a>
+</div>
+
+<br>
+
+<div id="igoogle">
+<a target="_top" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
+<a href="http://www.mathharbour.com/search" target="_top">More.</a>
+</div>
+
+
+</div>
+<a id="harbour" href="#" onmousedown="toggleHarbour('sites');">Harbour</a>
+
+<script>
+
+  function toggleHarbour(el)
+  {
+    el = document.getElementById(el);
+    if (el !== null) 
+    {
+        if (el.style.display.length === 0 || el.style.display === "block") 
+        {
+          el.style.display = "none";
+          gadgets.window.adjustHeight(70);
+        } else if (el.style.display === "none") 
+        {
+          el.style.display = "block";
+              gadgets.window.adjustHeight(150);
+        }
+    }
+  }
+
+  function updateStatus(value)
+  {
+     document.getElementById('searchTopic').value = value; 
+     // THIS must be here to update the value, for some odd reason
+     document.getElementById('topicStatus').value = document.getElementById('searchTopic').value;
+  }
+
+  // takes a text field and an array of strings for autocompletion
+  function autocomplete(input, data) 
+  {
+
+    // case insensitivity
+    input.value = input.value.toLowerCase();
+
+    // Update Displayed -status, same as SELECTED but without the DUMMY -arrow
+    updateStatus();
+
+    if (input.value.length == input.selectionStart && input.value.length == input.selectionEnd) 
+    {
+      var candidates = []
+      
+      // filter data to find only strings that start with existing value
+      // then, check TAB-TAB: return next choice mod(len-1) if exact match
+      for (var i=0; i < data.length; i++) 
+      {
+        if (data[i].indexOf(input.value) == 0 && data[i].length > input.value.length)
+        {
+          candidates.push(data[i])
+        } 
+        else if (data[i].indexOf(input.value) == 0)
+        {
+          input.value = data[(i+1)%(data.length)];
+          return true;
+        }
+      }
+      
+      if (candidates.length > 0) 
+      {
+        // some candidates for autocompletion are found
+        if (candidates.length >= 1) 
+        { 
+        input.value = candidates[0]
+    }
+        else 
+    {
+        input.value = longestInCommon(candidates, input.value.length)
+    }
+        return true
+      }
+    }
+    return false
+  }
+  
+  // finds the longest common substring in the given data set.
+  // takes an array of strings and a starting index
+  function longestInCommon(candidates, index) 
+  {
+    var i, ch, memo
+    do {
+      memo = null
+      for (i=0; i < candidates.length; i++) {
+        ch = candidates[i].charAt(index)
+        if (!ch) break
+        if (!memo) memo = ch
+        else if (ch != memo) break
+      }
+    } while (i == candidates.length && ++index)
+    
+    return candidates[0].slice(0, index)
+  }
+  
+  function getData(id)
+  {
+    return document.getElementById(id).value.split("\n");
+  }
+  
+function makeUnselectable(elem) {
+  if (typeof(elem) == 'string')
+    elem = document.getElementById(elem);
+  if (elem) {
+    elem.onselectstart = function() { return false; };
+    elem.style.MozUserSelect = "none";
+    elem.style.KhtmlUserSelect = "none";
+    elem.unselectable = "on";
+  }
+}
+
+  // so that auto-completion works despite selection
+  // 
+  //makeUnselectable('allQuery')
+
+  
+  // catch TAB keypresses in text input
+  var input = document.getElementById('allQuery')
+  input.addEventListener('keydown', function(e) 
+  {
+    // data determined by the topic in the Select value
+    var data = getData(document.getElementById("searchTopic").value);
+    var hidden = getData('hidden');
+
+    //Dummy code
+    var rmMe=data.indexOf('fin');
+    if (rmMe!=-1) data.splice(rmMe,1);
+
+    if (e.keyCode == 9)
+    { 
+    // suppress TAB always!
+    e.preventDefault()
+    // returns here something useless...
+    if (autocomplete(this, data)) {}
+    }
+  }, false)
+
+
+  // Autocomplete the field similarly to pressing TAB but clicking phonebutton
+  var phoneButton = document.getElementById('phoneButton');
+  phoneButton.addEventListener('click', function() 
+  {
+    // the field must be focused, or hitting some nulls
+    document.getElementById('allQuery').focus();
+
+    // data determined by the topic in the Select value
+    var data = getData(document.getElementById("searchTopic").value);
+
+    //Dummy code
+    var rmMe=data.indexOf('fin');
+    if (rmMe!=-1) data.splice(rmMe,1);
+
+    // returns here something useless...
+    if (autocomplete(document.getElementById('allQuery'), data)) {}
+  }, false);
+
+
+
+
+
+
+  // Clear with ^C
+  var isCTRL = false;
+  document.onkeyup = function(e)
+  {
+    if (e.which == 17) isCTRL=false;
+  }
+
+  document.onkeydown = function(e)
+  {
+    if (e.which == 17) isCTRL=true;
+    if (e.which == 67 && isCTRL) clear();
+  }
+
+
+
+  input.focus()
+</script>
+
+<script type="text/javascript">
+
+function handleSubmit()
+{
+
+  var form = document.getElementById("moduleForm"),
+    pad = document.getElementById("allQuery"),
+    query = _trim(pad.value.toLowerCase()),
+    topic = document.getElementById("searchTopic"),
+    checkCommand = _trim(query).split(":")[0].toLowerCase(),
+    searchUrl = new Array(),
+    urls = new Array(),
+    commandExists = query.match(/^[^:]*:.*$/gi),
+    topics = document.getElementById("topics").value.split("\n");
+
+  // THIS MUST BE HERE
+  if (query == "") return false;
+
+
+  for (var i =0; i <topics.length; i++)
+  {
+    // ALERT COLLISION POSSIBLE
+    if (query.toLowerCase() == topics[i].charAt(0) || query.toLowerCase() == topics[i])
+    {
+      topic.value = topics[i];
+      pad.value ="";
+      return false;
+    }
+  }
+
+  if (topic.value == "topics") return false;
+
+  //Landing search until better
+  searchUrl["ask"] = 'http://stackoverflow.com/search?q=';
+  searchUrl["cli"] =  'http://unix.stackexchange.com/search?q=';
+  searchUrl["dictionaries"] = 'http://writers.stackexchange.com?q=';
+  searchUrl["fin"] = 'https://noppa.tkk.fi/noppa/haku/';
+  searchUrl["invest"] =  'https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1459377513&q=';
+  searchUrl["math"] =  'http://math.stackexchange.com/search?q=';
+  searchUrl["solder"] = 'http://electronics.stackexchange.com/search?q=';
+  searchUrl["topics"] = '';
+
+
+  if (!commandExists)
+  {  
+          searchUrl = searchUrl[topic.value] + encodeURIComponent(query);
+          window.open(searchUrl, form.target || "_top");
+          return false;
+  }
+
+
+
+
+
+
+  // Modular Search
+
+  urls["math"] =
+      [
+      'alpha|http://www.wolframalpha.com/input/?i=',
+      'ask|http://math.stackexchange.com/search?q=',
+      'course|http://www.ocwconsortium.org/index.php?q=mathematics&option=com_coursefinder&uss=1&l=&s=&Itemid=166&b.x=35&b.y=9&b=search&q=',
+      'define|https://sites.google.com/site/mathharbourclassroom/system/app/pages/customSearch?scope=cse-goog_640195594&q=',
+      'eg|http://www.exampleproblems.com/wiki/index.php/Special:Search?search=',
+      'history|http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377240&q=',
+      'latex|http://research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_696098646&q=',
+      'prove|http://www.proofwiki.org/w/index.php?title=Special%3ASearch&go=Go&search=',
+      'puzzle|https://sites.google.com/site/mathharbourclassroom/system/app/pages/customSearch?scope=cse-goog_1087142469&q=',
+      'research|http://mathoverflow.net/search?q=',
+      'seq|http://oeis.org/search?q=',
+      'so|http://math.stackexchange.com/search?q=',
+      'timeline|http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377241&q=',
+      'unsolved|http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377242&q='
+      ];
+  urls["cli"] =
+      [
+      'ask|http://stackoverflow.com/search?q=',
+      'bsd|https://sites.google.com/site/cliharbour/system/app/pages/customSearch?scope=cse-goog_2024053178&q=',
+      'define|http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1077465085&q=',
+      'gcode|http://www.google.com/codesearch?q=',
+      'github|http://github.com/search?q=',
+      'jobs|http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1977362030&q=',
+      'obsd|https://sites.google.com/site/cliharbour/system/app/pages/customSearch?scope=cse-goog_1182548146&q=',
+      'ohloh|http://www.ohloh.net/p?query=',
+      'puzzle|https://sites.google.com/site/mathharbourclassroom/system/app/pages/customSearch?scope=cse-goog_1087142469&q=',
+      'refactor|http://www.google.com/search?q=site%3Ahttp%3A%2F%2Frefactormycode.com+',
+      'security|http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_2077800436&q=',
+      'unix|http://unix.stackexchange.com/search?q=', 
+      'vim|http://vim.wikia.com/wiki/Special:Search?search='
+        ];
+
+  urls["invest"] =
+      [
+      'boglehead|http://parrot.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1341241175&q=',
+      'contrarian|http://parrot.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1108895127&q=',
+      'define|http://sites.google.com/site/investingharbour/system/app/pages/customSearch?scope=cse-goog_24153137&q=',
+      'edgar|http://www.sec.gov/cgi-bin/browse-edgar?company=&match=&filenum=&State=&Country=&SIC=&owner=exclude&Find=Find+Companies&action=getcompany&CIK=',
+      'growth|http://finance.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1012191880&q=',
+      'g|http://www.google.com/finance?q=',
+      'so|http://money.stackexchange.com/search?q=',
+      'stats|http://finance.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_77447182&q=',
+      'timeless|http://sites.google.com/site/investingharbour/system/app/pages/customSearch?scope=cse-goog_24153138&q=',
+      'value|http://finance.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1012191881&q='
+      ];
+
+  urls["ask"] =
+      [
+        'android|http://android.stackexchange.com/search?q=',
+        'area51|http://area51.stackexchange.com/search?q=',
+        'atheism|http://atheism.stackexchange.com/search?q=',
+        'audio|http://audio.stackexchange.com/search?q=',
+        'bicycles|http://bicycles.stackexchange.com/search?q=',
+        'boardgames|http://boardgames.stackexchange.com/search?q=',
+        'codegolf|http://codegolf.stackexchange.com/search?q=',
+        'codereview|http://codereview.stackexchange.com/search?q=',
+        'cooking|http://cooking.stackexchange.com/search?q=',
+        'cstheory|http://cstheory.stackexchange.com/search?q=',
+        'dba|http://dba.stackexchange.com/search?q=',
+        'diy|http://diy.stackexchange.com/search?q=',
+        'electronics|http://electronics.stackexchange.com/search?q=',
+        'gamedev|http://gamedev.stackexchange.com/search?q=',
+        'gaming|http://gaming.stackexchange.com/search?q=',
+        'gis|http://gis.stackexchange.com/search?q=',
+        'graphicdesign|http://graphicdesign.stackexchange.com/search?q=',
+        'guitars|http://guitars.stackexchange.com/search?q=',
+        'homebrew|http://homebrew.stackexchange.com/search?q=',
+        'math|http://math.stackexchange.com/search?q=',
+        'money|http://money.stackexchange.com/search?q=',
+        'physics|http://physics.stackexchange.com/search?q=',
+        'programmers|http://programmers.stackexchange.com/search?q=',
+        'quant|http://quant.stackexchange.com/search?q=',
+        'rpg|http://rpg.stackexchange.com/search?q=',
+        'scifi|http://scifi.stackexchange.com/search?q=',
+        'security|http://security.stackexchange.com/search?q=',
+        'server|http://serverfault.com/search?q=',
+        'so|http://stackoverflow.com/search?q=',
+        'startup|http://answers.onstartups.com/search?q=',
+        'stats|http://stats.stackexchange.com/search?q=',
+        'tex|http://tex.stackexchange.com/search?q=',
+        'ui|http://ui.stackexchange.com/search?q=',
+        'unix|http://unix.stackexchange.com/search?q=',
+        'webapps|http://webapps.stackexchange.com/search?q=',
+        'webmasters|http://webmasters.stackexchange.com/search?q=',
+        'wordpress|http://wordpress.stackexchange.com/search?q=',
+        'writers|http://writers.stackexchange.com/search?q='
+      ];
+
+
+  urls["solder"] =
+      [
+        'ask|http://electronics.stackexchange.com/search?q=',
+        'define|http://www.google.com/cse?cx=007883453237583604479%3Aowkzbg1mniu&q=',
+        'fpga|http://www.google.com/cse?cx=007883453237583604479%3Ah2rzly0tupm&q=',
+        'openhw|http://www.google.com/cse?cx=007883453237583604479%3A6-szywbhqj4&q='
+      ];
+
+  urls["fin"] =
+      [
+        'aty_kirjasto|http://peppi.hut.fi/pub/google/haku.php?Search_Code=TKEY%5E%2A&Search=Search&Search_Arg=', 
+        'aty_noppa|https://noppa.tkk.fi/noppa/haku/', 
+        'aty_tentit|http://www.google.com/cse?cx=007883453237583604479%3As7at62_utkk&q=', 
+        'hy_kirjasto|https://helka.linneanet.fi/cgi-bin/Pwebrecon.cgi?Search_Arg=', 
+        'hy_tentit|http://www.google.com/cse?cx=007883453237583604479%3A6sbbohxmd_c&q=', 
+        'hy|http://www.google.com/cse?cx=007883453237583604479%3A6sbbohxmd_c&q='
+      ];
+
+
+  urls["dictionaries"] =
+      [
+        'de2eng|http://dict.leo.org/ende?lp=ende&lang=de&search=',
+        'de2de|http://www.linguee.de/deutsch-englisch/search?source=auto&query=',
+        'ee|http://www.eki.ee/dict/qs/index.cgi?Q=',
+        'ee2eng|http://dict.ibs.ee/translate.cgi?language=Estonian&word=',
+        'eng2ee|http://dict.ibs.ee/translate.cgi?language=English&word=',
+        'eng_adv_camb|http://dictionary.cambridge.org/dictionary/british/',
+        'esp2eng|http://www.dicts.info/2/english-esperanto.php?word='
+      ];
+
+  urls = urls[topic.value];
+
+  if (commandExists)
+  {
+
+    for ( var i=0;i<urls.length; i++)
+    {
+      if (checkCommand == urls[i].split("|")[0])
+      {
+        var re = new RegExp("^"+urls[i].split("|")[0], "gi");
+        query = _trim(query.replace(re, "").split(":").join(""));
+
+        searchUrl = urls[i].split("|")[1] + encodeURIComponent(query);
+        window.open(searchUrl, form.target || "_top");
+
+        return false;
+      }
+    }
+  }
+
+  return false;
+}
+
+
+// Tracks button click as an event
+ga.reportEvent("All-in-One Gadget", "Search", "Button", 0);
+</script>
+
+
+
+
+</body>
+</html>
+
+]]>
+</Content></Module>

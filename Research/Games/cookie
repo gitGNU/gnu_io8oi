@@ -1,6 +1,0 @@
-#
-# Description: you have X amount of doors and you initially know that
-# some of them have cookies behind them. Invent a way to find the optimal
-# cookie-hunting-path.
-#
-# Topics: conditional probability, markov chains, other stochastic processes and unknown

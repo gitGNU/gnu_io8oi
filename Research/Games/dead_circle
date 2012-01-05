@@ -1,6 +1,0 @@
-#
-# Description: 
-# Sysadmins kill outgoing links to sites without back-linking.
-# It creates farms without no connections.
-# Find the smallest amount of paths that are needed to connect the farms.
-#

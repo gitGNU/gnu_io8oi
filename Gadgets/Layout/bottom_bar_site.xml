@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs
+  title="Math Harbour Bottom bar"
+  author="MathHarbour.com"
+  height="70"
+  />
+<Content type="html"><![CDATA[
+
+<style type="text/css">
+body
+{
+ background: transparent;
+ font-size:10px;
+ a:link {text-decoration:none;}
+ a:visited {text-decoration:none;}
+ a:hover {text-decoration:underline;}
+ a:active {text-decoration:underline;}
+}
+
+img
+{
+ float: left;
+ width: 25px;
+ height: 25px;
+}
+
+input
+{
+ float: left;
+ width: 70%;
+}
+
+#allQuery{
+background-image:url('http://1.bp.blogspot.com/-7aEFFShhdPs/TpjXjqNH9hI/AAAAAAAACGg/SRFvVKqwjJU/s1600/timeGlass15.png');
+background-repeat:no-repeat;
+padding-left:17px;
+max-width:400px;
+}
+
+#phoneButton {
+cursor: pointer;
+height: 25px;
+width: 25px;
+}
+
+#data{ display:none }
+
+#search {
+float:left;
+height:98%;
+width:98%;
+}
+
+#searchTopic{
+border:none;
+background:transparent;
+font-size:8px;
+display:none;
+clear:both;
+vertical-align:sup;
+}
+
+#searchFirstline {
+display:block;
+}
+#topic_box {
+display:block;
+clear:both;
+}
+
+
+#topicStatus{
+background:transparent;
+border:none;
+font-size:8px;
+position:absolute;
+top:30px;
+left:53px;
+}
+
+#back{
+cursor: pointer;
+top:30px;
+left:0px;
+font-size:8px;
+position:absolute;
+font-colour: brown;
+background:transparent;
+}
+
+#harbour{
+cursor: pointer;
+top:30px;
+left:21px;
+font-size:8px;
+position:absolute;
+font-colour: brown;
+background:transparent;
+}
+
+
+#sites{
+ display:block;
+ float: center;
+}
+
+
+</style>
+
+<body>
+
+
+<div id="sites">
+
+ 
+
+<div style="text-align:center">
+<a href="http://www.mathharbour.com/" target="_top">Math Harbour</a>&nbsp;
+<a href="http://parrot.mathharbour.com/" target="_top">Junior Parrot</a>&nbsp;
+<a href="http://johto.mathharbour.com/" target="_top">Johto</a>&nbsp;
+</div><br>
+<div style="text-align:center">
+
+<a target="_top" href="http://www.google.com/ig/directory?type=gadgets&url=hosting.gmodules.com/ig/gadgets/file/113238372519026650011/math_harbour.xml">iGoogle</a>
+<a href="http://www.mathharbour.com/search" target="_top">More.</a>
+</div>
+
+</div>
+
+
+</body>
+
+
+]]></Content>
+</Module>

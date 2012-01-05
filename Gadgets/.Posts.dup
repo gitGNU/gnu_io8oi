@@ -1,0 +1,108 @@
+# Copyright (c) 2011, MathHarbour.com, Henri Losoi
+# 
+# Permission to use, copy, modify, and/or distribute this software
+# for any purpose with or without fee is hereby granted, provided
+# that the above copyright notice and this permission notice appear
+# in all copies.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+# WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+# AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+# DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA
+# OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+# TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+# PERFORMANCE OF THIS SOFTWARE.
+# 
+
+
+alpha	math	http://www.wolframalpha.com/input/?i=
+android 	so	http://android.stackexchange.com/search?q=
+area51 	so	http://area51.stackexchange.com/search?q=
+ask	math	http://math.stackexchange.com/search?q=
+ask 	cli 	http://stackoverflow.com/search?q=
+ask 	solder	http://electronics.stackexchange.com/search?q=
+atheism 	so	http://atheism.stackexchange.com/search?q=
+aty_kirjasto 	suomi, math, HIDE	http://peppi.hut.fi/pub/google/haku.php?Search_Code=TKEY%5E%2A&Search=Search&Search_Arg=
+aty_noppa 	suomi, math, HIDE	https://noppa.tkk.fi/noppa/haku/
+aty_tentit 	suomi, math, HIDE	http://www.google.com/cse?cx=007883453237583604479%3As7at62_utkk&q=
+audio 	so	http://audio.stackexchange.com/search?q=
+bicycles 	so	http://bicycles.stackexchange.com/search?q=
+boardgames 	so	http://boardgames.stackexchange.com/search?q=
+boglehead 	invest, HOME	http://parrot.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1341241175&q=
+bsd 	cli, TODO 	https://sites.google.com/site/cliharbour/system/app/pages/customSearch?scope=cse-goog_2024053178&q=
+codegolf 	so	http://codegolf.stackexchange.com/search?q=
+codereview 	so	http://codereview.stackexchange.com/search?q=
+contrarian 	invest, HOME	http://parrot.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1108895127&q=
+cooking 	so	http://cooking.stackexchange.com/search?q=
+course	math	http://www.ocwconsortium.org/index.php?q=mathematics&option=com_coursefinder&uss=1&l=&s=&Itemid=166&b.x=35&b.y=9&b=search&q=
+cstheory 	so	http://cstheory.stackexchange.com/search?q=
+dba 	so	http://dba.stackexchange.com/search?q=
+de2eng 	dictionary	http://dict.leo.org/ende?lp=ende&lang=de&search=
+define	math, HOME	http://research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1652454362&q=
+define 	cli, HOME	http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1077465085&q=
+define 	invest, TODO	http://sites.google.com/site/investingharbour/system/app/pages/customSearch?scope=cse-goog_24153137&q=
+define 	solder, TODO	http://www.google.com/cse?cx=007883453237583604479%3Aowkzbg1mniu&q=
+diy 	so	http://diy.stackexchange.com/search?q=
+edgar 	invest	http://www.sec.gov/cgi-bin/browse-edgar?company=&match=&filenum=&State=&Country=&SIC=&owner=exclude&Find=Find+Companies&action=getcompany&CIK=
+ee2eng 	dictionary	http://dict.ibs.ee/translate.cgi?language=Estonian&word=
+eg	math	http://www.exampleproblems.com/wiki/index.php/Special:Search?search=
+electronics 	so	http://electronics.stackexchange.com/search?q=
+eng2ee 	dictionary	http://dict.ibs.ee/translate.cgi?language=English&word=
+eng2eng 	dictionary	http://www.tfd.com/
+eng_adv_camb 	dictionary	http://dictionary.cambridge.org/dictionary/british/
+esp2eng 	dictionary	http://www.dicts.info/2/english-esperanto.php?word=
+fpga 	solder, TODO 	http://www.google.com/cse?cx=007883453237583604479%3Ah2rzly0tupm&q=
+g 	invest	http://www.google.com/finance?q=
+gamedev 	so	http://gamedev.stackexchange.com/search?q=
+gaming 	so	http://gaming.stackexchange.com/search?q=
+gcode 	cli 	http://www.google.com/codesearch?q=
+gis 	so	http://gis.stackexchange.com/search?q=
+github 	cli 	http://github.com/search?q=
+graphicdesign 	so	http://graphicdesign.stackexchange.com/search?q=
+growth 	invest, TODO	https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1012191880&q=
+guitars 	so	http://guitars.stackexchange.com/search?q=
+history	math, HOME	http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377240&q=
+homebrew 	so	http://homebrew.stackexchange.com/search?q=
+hy 	suomi, math, HIDE	http://www.google.com/cse?cx=007883453237583604479%3A6sbbohxmd_c&q=
+hy_kirjasto 	suomi, math, HIDE	https://helka.linneanet.fi/cgi-bin/Pwebrecon.cgi?Search_Arg=
+hy_tentit 	suomi, math, HIDE	http://www.google.com/cse?cx=007883453237583604479%3A6sbbohxmd_c&q=
+jobs 	cli, HOME	http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_1977362030&q=
+latex	math, HOME	http://research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_696098646&q=
+math 	so, math	http://math.stackexchange.com/search?q=
+money 	so	http://money.stackexchange.com/search?q=
+obsd 	cli, TODO 	https://sites.google.com/site/cliharbour/system/app/pages/customSearch?scope=cse-goog_1182548146&q=
+ohloh 	cli 	http://www.ohloh.net/p?query=
+openhw 	solder, TODO	http://www.google.com/cse?cx=007883453237583604479%3A6-szywbhqj4&q=
+physics 	so	http://physics.stackexchange.com/search?q=
+programmers 	so	http://programmers.stackexchange.com/search?q=
+prove	math	http://www.proofwiki.org/w/index.php?title=Special%3ASearch&go=Go&search=
+puzzle 	cli, math, TODO	https://sites.google.com/site/mathharbourclassroom/system/app/pages/customSearch?scope=cse-goog_1087142469&q=
+quant 	so, invest	http://quant.stackexchange.com/search?q=
+refactor 	cli, TODO	http://www.google.com/search?q=site%3Ahttp%3A%2F%2Frefactormycode.com+
+research	math	http://mathoverflow.net/search?q=
+rpg 	so	http://rpg.stackexchange.com/search?q=
+scifi 	so	http://scifi.stackexchange.com/search?q=
+security 	cli, HOME 	http://cli.research.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_2077800436&q=
+security 	so	http://security.stackexchange.com/search?q=
+seq	math	http://oeis.org/search?q=
+server 	so, cli	http://serverfault.com/search?q=
+so	math	http://math.stackexchange.com/search?q=
+so 	invest	http://money.stackexchange.com/search?q=
+so 	so	http://stackoverflow.com/search?q=
+startup 	so	http://answers.onstartups.com/search?q=
+stats 	invest, TODO	https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_77447182&q=
+stats 	so	http://stats.stackexchange.com/search?q=
+tex 	so, cli	http://tex.stackexchange.com/search?q=
+timeless 	invest, TODO	http://sites.google.com/site/investingharbour/system/app/pages/customSearch?scope=cse-goog_24153138&q=
+timeline	math, HOME	http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377241&q=
+ui 	so	http://ui.stackexchange.com/search?q=
+unix 	cli 	http://unix.stackexchange.com/search?q=
+unix 	so, cli	http://unix.stackexchange.com/search?q=
+unsolved	math, HOME	http://past.mathharbour.com/system/app/pages/customSearch?scope=cse-goog_835377242&q=
+value 	invest, TODO	https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1012191881&q=
+vim 	cli 	http://vim.wikia.com/wiki/Special:Search?search=
+webapps 	so	http://webapps.stackexchange.com/search?q=
+webmasters 	so	http://webmasters.stackexchange.com/search?q=
+wordpress 	so	http://wordpress.stackexchange.com/search?q=
+writers 	so	http://writers.stackexchange.com/search?q=
