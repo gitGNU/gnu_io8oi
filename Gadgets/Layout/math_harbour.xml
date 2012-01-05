@@ -4,10 +4,10 @@
 height="70"
 description=
 "
-Close your eyes and command!
-Unites different search interfaces. 
-Support for iPhone.
-Advanced modularization for topics such as mathematics, dictionaries, calculators, news, logic vizualizers and for much more!
+Command, searching is a way of living.
+Harbour unites different search interfaces while also having -- some fun! 
+Support for natural Unix -shortcuts such as TAB (or the wheel for iPhone). 
+Advanced modularization for topics such as mathematics, dictionaries, calculators, news, logic vizualizers and for much more! 
 Welcome to the wonderland by Math Harbour, MathHarbour.com.
 "
 author ="MathHarbour.com" author_email = "mathharbour1@gmail.com" author_aboutme = "Math Harbour specializes in search." title_url="http://mathharbour.com" category="tools" category2="technology" scrolling="false"
