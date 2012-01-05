@@ -625,7 +625,7 @@ function handleSubmit()
   searchUrl["cli"] =  'http://unix.stackexchange.com/search?q=';
   searchUrl["dictionaries"] = 'http://writers.stackexchange.com?q=';
   searchUrl["fin"] = 'https://noppa.tkk.fi/noppa/haku/';
-  searchUrl["harbour"] = 'http://www.rseek.org/?cx=010923144343702598753%3Aboaz1reyxd4&newwindow=1&&sa=Search+functions%2C+lists%2C+and+more&cof=FORID%3A11&siteurl=rseek.org%2F&q=';
+  searchUrl["harbour"] = 'https://www.google.com/#q=site:mathharbour.com+';
   searchUrl["invest"] = 'https://sites.google.com/site/freefinanceresearch/system/app/pages/customSearch?scope=cse-goog_1459377513&q=';
   searchUrl["load"] =  'http://www.baidu.com/s?wd=';
   searchUrl["math"] =  'http://math.stackexchange.com/search?q=';
