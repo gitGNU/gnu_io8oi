@@ -1,0 +1,5 @@
+
+\section{Usability}
+
+
+- different search modes like Vi/M's v-i-n

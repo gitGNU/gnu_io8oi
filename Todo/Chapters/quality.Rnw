@@ -1,0 +1,9 @@
+
+\section{Quality}
+
+
+- general search quality metrics such as Pscore, mCPC and thresh
+
+
+
+- find out reasons why some URLs become BROKEN
