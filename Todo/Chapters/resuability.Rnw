@@ -1,8 +1,0 @@
-
-\section{Reusability}
-
-Currently not so, most things are closed...ok some apis but not otherwise.
-Naturally to some extent, some issues hard...
-
-
-

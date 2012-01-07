@@ -1,6 +1,0 @@
-
-\section{Tools}
-
-- similarity, try ssdeep
-
-
