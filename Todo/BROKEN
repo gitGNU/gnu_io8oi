@@ -6,5 +6,12 @@ BROKEN OR INVESTIGATE ALTERNATIVE APPROACH
 3. 
 
 
+UNKNOWN
+- what to do with sites that do not follow logical POST usage?
+example Camridge English search with ambiguous curious, curious_1 ending?
+----> impossible, user-interaction-automation AND/OR consulting... (both slow)
+----> PLAN B??
+- partNo|http://embeddedcookbook.com/parts/
+
 
 [3] human-interaction-automater-thing-the-playful-gay-software in Perl
