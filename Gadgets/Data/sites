@@ -1,0 +1,12 @@
+#
+# vim:set ts=30 nowrap
+#
+
+HOME, invest	http://parrot.mathharbour.com/
+HOME, johto	http://johto.mathharbour.com/
+HOME, math	http://www.mathharbour.com/
+invest, populi	http://finance.mathharbour.com
+research, math http://past.mathharbour.com/
+research, cli	http://cli.research.mathharbour.com/
+research, invest	http://finance.research.mathharbour.com/
+research, math	http://research.mathharbour.com/
