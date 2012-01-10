@@ -6,7 +6,7 @@ description=
 "
 Command, searching is a way of living.
 Harbour unites different search interfaces while also having -- some fun! 
-Support for natural Unix -shortcuts such as TAB (or the wheel for iPhone). 
+Support for shell-style cmds such as TAB (or the wheel for iPhone). 
 Advanced modularization for topics such as mathematics, dictionaries, calculators, news, logic vizualizers and for much more! 
 Welcome to the wonderland by Math Harbour, MathHarbour.com.
 "
