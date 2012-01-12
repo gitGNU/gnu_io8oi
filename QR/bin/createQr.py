@@ -103,18 +103,7 @@ main()
 
 
 
-#TRIAL 1
-#im=qrencode.encode(data, version=0, level=QR_ECLEVEL_L, hint=QR_MODE_8,
-	   #case_sensitive=True)[2]
-#im.save('./Pictures/tinyTiny.gif', "GIF")
-
-#TRIAL 2
-#size = 100
-#im=qrencode.encode_scaled(data, size, version=0, level=QR_ECLEVEL_L, hint=QR_MODE_8,
-	   #case_sensitive=True)[2]
-#im.save('./Pictures/'+data+str(size)+'.gif', "GIF")
-
 # REFERENCES
+# QR functions: encode and encode_scaled [1]
 #
-# QR functions: encode and encode_scaled
-#https://github.com/Arachnid/pyqrencode/blob/master/qrencode/__init__.py
+# [1] https://github.com/Arachnid/pyqrencode/blob/master/qrencode/__init__.py
