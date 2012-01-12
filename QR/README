@@ -1,0 +1,11 @@
+This is apparently very robust QR generator [1],
+at least very simple without bloated code, Apache 2.
+TODO: License issues not checked: A2 and ISC -compliant.
+
+For it, you need to do
+
+$ sudo apt-get install libqrencode-dev python-dev
+$ sudo setup.py install
+
+
+[1] http://pypi.python.org/pypi/qrencode
