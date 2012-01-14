@@ -1,5 +1,7 @@
-
-
+#
+# Do not use this yet...
+#
+#
 # TODO: reuse the createQR -function for this
 # TODO: THE LAYOUT to separate file.
 # TODO: SH -script
@@ -11,6 +13,8 @@
 # $ python bin/createQr.py -f advancedQr -m 'I am 10801, yes!' -s 200
 
 amount=0.5
+#TODO: 	with servers, this was quite triaval task -- just $ mv ./Public/.../
+#	now, it takes time!
 imUrl='https://sites.google.com/site/mathharbour/search/qrCode_mh.gif'
 label="MathHarbour.com"
 
