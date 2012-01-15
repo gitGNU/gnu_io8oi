@@ -24,6 +24,9 @@
 #
 # TRIAL 1
 # $ python bin/createQr.py -f advancedQr -m 'I am 10801, yes!' -s 200
+#
+# TRIAL 2
+# $ python bin/createQr.py -s 500 -X ./Documents/QR/3 -f 'QR/3'
 
 
 
@@ -48,6 +51,8 @@ def parseCli():
 	parser = optparse.OptionParser()
 	parser.add_option("-m", "--msg", dest="msg",
 		     help="Message in QR code such as BC -hash and some string.", metavar="MSG")
+	parser.add_option("-X", "--Msg", dest="fileMsg",
+		     help="Filename for the msg.", metavar="FILE")
 	parser.add_option("-f", "--file", dest="filename",
 		     help="Filename for the image.", metavar="FILE")
 	parser.add_option("-s", "--size", dest="size",
@@ -64,11 +69,16 @@ def parseCli():
 
 def main():
 
-	def getMsg(myMsg, myFile):
+	def getMsg(myMsg, myFile, fileMsg):
 		# returns the Msg for the image
 		# msg is the filename if no msg otherwise msg
+
 		if(myMsg):
-			data=myMsg
+			data=myMsg	# msg in cmdline
+		elif(fileMsg):
+			print('I am here'+fileMsg)
+			fileMsg=file(fileMsg, 'r').read()
+			data=fileMsg	# msg in file
 		else:
 			data=myFile
 		return data
@@ -77,19 +87,20 @@ def main():
 
 	if (options.size and options.filename):
 		# creates a file with user-defined size
-		data=getMsg(options.msg, options.filename)
+		data=getMsg(options.msg, options.filename, options.fileMsg)
 		size = int(options.size)	# must be before myFilename
-		myFilename = './Pictures/'+options.filename+str(size)+'.gif'
+		myFilename = './Pictures/'+options.filename+'.gif'
 
 		im=qrencode.encode_scaled(data, size, version=0, 
 			level=QR_ECLEVEL_L, hint=QR_MODE_8,
 		   	case_sensitive=True)[2]
 		im.save(myFilename, "GIF")
-		print('Created file: '+myFilename)
+		print('Created file: '+myFilename+'\n')
+		print('Size = '+str(size))
 
 	elif (options.filename):
 		# creates a very small picture by default without size
-		data=getMsg(options.msg, options.filename)
+		data=getMsg(options.msg, options.filename, options.fileMsg)
 		myFilename='./Pictures/'+options.filename+'.gif'
 
 		im=qrencode.encode(data, version=0, 
